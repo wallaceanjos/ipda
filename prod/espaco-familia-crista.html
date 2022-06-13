@@ -1,0 +1,374 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
+  rel="stylesheet"
+  crossorigin="anonymous"
+/>
+
+<!-- [INÍCIO] CONFIG - LARGURA DA TELA
+  =============================================== -->
+<style>
+  .page.container.row {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1920px;
+  }
+  :root {
+    --primary-color: #3d3e85;
+    --primary: #3d3e85;
+    --secondary-color: #f4f4f4;
+    --secondary: #f4f4f4;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --white: #fff;
+    --gray: #687281;
+    --gray-dark: #323f52;
+    --success: #00ac69;
+    --info: #00cfd5;
+    --warning: #f4a100;
+    --danger: #e81500;
+    --light: #eff3f9;
+    --dark: #171717;
+    --black: #000;
+    --white: #fff;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red-soft: #eec7c7;
+    --orange-soft: #f1d6c7;
+    --yellow-soft: #f0e3c7;
+    --green-soft: #bfe5dc;
+    --teal-soft: #bfe8e5;
+    --cyan-soft: #bfecf2;
+    --blue-soft: #bfd6f8;
+    --indigo-soft: #d1c2f6;
+    --purple-soft: #d4c2ef;
+    --pink-soft: #edc2d9;
+    --primary-soft: #bfd6f8;
+    --secondary-soft: #d4c2ef;
+    --success-soft: #bfe5dc;
+    --info-soft: #bfecf2;
+    --warning-soft: #f0e3c7;
+    --danger-soft: #eec7c7;
+    --black-soft: #fafafa;
+  }
+
+  .page-inner span.badge {
+    font-size: 0.75em;
+    line-height: 1em !important;
+  }
+
+  .page-inner.h1,
+  .page-inner h1 {
+    font-size: 2em !important;
+    font-weight: bold;
+  }
+
+  .page-inner.h2,
+  .page-inner h2 {
+    font-size: 1.6em !important;
+  }
+
+  .page-inner .h4,
+  .page-inner h4 {
+    font-size: 1.4em !important;
+    font-weight: bold;
+  }
+
+  .page-inner p {
+    line-height: 2em !important;
+    font-size: 1em !important;
+  }
+</style>
+<!-- =============================================== --
+    -- [FINAL] CONFIG - LARGURA DA TELA -->
+<div class="mds-bootstrap-5">
+  <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
+  -- =============================================== -->
+  <section class="multiuse-pages-section-socialbar">
+    <div class="socialbar">
+      <div class="social-link-group text-center">
+        <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
+          ><img
+            src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/facebook.svg"
+            alt=""
+        /></a>
+
+        <a
+          href="https://www.instagram.com/igrejadeuseamoroficial"
+          target="blank"
+          ><img
+            src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/instagram.svg"
+            alt=""
+        /></a>
+
+        <a
+          href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
+          target="blank"
+          ><img
+            src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/soundcloud.svg"
+            alt=""
+        /></a>
+
+        <a href="https://twitter.com/deusamoroficial" target="blank"
+          ><img
+            src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/twitter.svg"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </section>
+  <style>
+    @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+    .multiuse-pages-section-socialbar {
+      padding: 0;
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+      display: inline-block;
+      margin: 0px auto;
+      padding: 10px 40px;
+      text-align: center;
+    }
+
+    .multiuse-pages-section-socialbar .socialbar {
+      width: 100%;
+      background-color: var(--secondary-color);
+      border: 0px solid #222;
+      transition: all linear 200ms;
+      line-height: 1.15;
+    }
+
+    .multiuse-pages-section-socialbar .socialbar .social-link-group {
+      margin: 0;
+    }
+
+    .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+      display: inline-block;
+      margin: 0px auto;
+      padding: 10px 30px;
+      text-align: center;
+      color: var(--primary-color);
+      transition: all linear 200ms;
+    }
+
+    .multiuse-pages-section-socialbar .socialbar .social-link-group a:hover {
+      color: #ffffff;
+    }
+
+    .multiuse-pages-section-socialbar :hover.socialbar {
+      box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
+    }
+
+    .multiuse-pages-section-socialbar img {
+      height: 20px;
+      width: 20px;
+      display: flex;
+    }
+  </style>
+  <!-- =============================================== --
+-- [FINAL] SECTION - MIDIAS SOCIAIS -->
+
+  <!-- [INÍCIO] SECTION - BANNER DIVIDER 2
+================================================== -->
+  <section class="multiuse-pages-section-banner-divider2"></section>
+  <style>
+    .multiuse-pages-section-banner-divider2 {
+      height: 350px;
+      background-image: url(https://i.ibb.co/LPVSqyK/image.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  </style>
+  <!-- [FINAL] SECTION - BANNER DIVIDER
+================================================== -->
+
+  <!-- [INÍCIO] SECTION - STORY
+================================================== -->
+  <style>
+    .multiuse-pages-section-story .underline {
+      width: 100px;
+      height: 5px;
+      margin: 10px auto 50px;
+      border-radius: 10px;
+      background-color: var(--primary-color);
+    }
+
+    .multiuse-pages-section-story .btn {
+      font-size: 1em !important;
+      border-radius: 8px !important;
+      padding: 8px 16px !important;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .multiuse-pages-section-story .btn:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+
+    .multiuse-pages-section-story .blockquote {
+      border-left: 5px solid var(--primary-color);
+    }
+
+    .multiuse-pages-section-story {
+      background-color: var(--white);
+      text-align: center;
+      padding: 80px 0;
+    }
+  </style>
+  <section class="multiuse-pages-section-story">
+    <div class="container">
+      <h1 class="font-weight-bold text-center h1">Espaço Família Cristã</h1>
+      <div class="underline"></div>
+
+      <!--Section description-->
+      <p class="text-left mb-5 mx-auto w-responsive lead">
+        Ouça agora os estudos e edifique a vida da sua família. Você também pode
+        ouvir o Espaço Família Cristã de segunda a sexta-feira, às 15h, via
+        internet. Deus Abençoe
+      </p>
+    </div>
+  </section>
+
+  <style></style>
+  <!-- [FINAL] SECTION - STORY
+  ================================================== -->
+
+  <!-- [INÍCIO] SECTION - DETALHES
+================================================== -->
+  <style>
+    .multiuse-pages-section-details {
+      background-color: #eeeeee;
+      padding: 80px 0;
+    }
+
+    .multiuse-pages-section-details img {
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px 0px #0000002f;
+      box-shadow: 0px 5px 15px 0px #0000003f;
+      box-shadow: 0px 2px 7px 0px #0000004f;
+    }
+
+    .multiuse-pages-section-details .bio-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px 0px #3d3e851c;
+    }
+
+    .multiuse-pages-section-details .btn {
+      font-size: 1em !important;
+      border-radius: 8px !important;
+      padding: 8px 16px !important;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .multiuse-pages-section-details .blockquote {
+      border-left: 5px solid var(--primary-color);
+    }
+
+    .multiuse-pages-section-details .btn:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+
+    .multiuse-pages-section-details .card-header {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+  </style>
+
+  <section class="multiuse-pages-section-details">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 bio">
+          <div class="bio-card p-5 m-3">
+            <h2 class="font-weight-bold h2">A Voz da Libertação</h2>
+            <hr />
+            <p class="lead"></p>
+            <div class="bio-card mb-4 rounded-3 m-2">
+              <div class="card-header py-3">
+                <h5 class="my-0 fw-normal">Programa Mensagens Cantadas</h5>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title">
+                  <small class="text-muted fw-light">Segunda a Sábado</small>
+                </h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>12h30 às 14h</li>
+                  <hr />
+                  <li>
+                    Apresentação: Irmã Debora Miranda e Pastor Lourival de
+                    Almeida
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p></p>
+            <p class="lead"></p>
+            <div class="bio-card mb-4 rounded-3 m-2">
+              <div class="card-header py-3">
+                <h5 class="my-0 fw-normal">Programa Espaço Família Cristã</h5>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title">
+                  <small class="text-muted fw-light">Segunda a Sábado</small>
+                </h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>15h às 16h</li>
+                  <hr />
+                  <li>Apresentação: Irmãs Ereni Miranda e Rosa Tenório</li>
+                </ul>
+              </div>
+            </div>
+
+            <p></p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="bio-card p-5 m-3">
+            <h2 class="font-weight-bold h2">Espaço Família Cristã</h2>
+
+            <iframe
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/253540224&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
+              width="100%"
+              height="450"
+              frameborder="no"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [FINAL] SECTION - DETALHES
+================================================== -->
+</div>

@@ -1,0 +1,431 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
+  rel="stylesheet"
+  crossorigin="anonymous"
+/>
+
+<!-- [INÍCIO] CONFIG - LARGURA DA TELA
+  -- =============================================== -->
+<style>
+  body > .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  :root {
+    --primary-color: #3d3e85;
+    --primary: #3d3e85;
+    --secondary-color: #f4f4f4;
+    --secondary: #f4f4f4;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --white: #fff;
+    --gray: #687281;
+    --gray-dark: #323f52;
+    --success: #00ac69;
+    --info: #00cfd5;
+    --warning: #f4a100;
+    --danger: #e81500;
+    --light: #eff3f9;
+    --dark: #171717;
+    --black: #000;
+    --white: #fff;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red-soft: #eec7c7;
+    --orange-soft: #f1d6c7;
+    --yellow-soft: #f0e3c7;
+    --green-soft: #bfe5dc;
+    --teal-soft: #bfe8e5;
+    --cyan-soft: #bfecf2;
+    --blue-soft: #bfd6f8;
+    --indigo-soft: #d1c2f6;
+    --purple-soft: #d4c2ef;
+    --pink-soft: #edc2d9;
+    --primary-soft: #bfd6f8;
+    --secondary-soft: #d4c2ef;
+    --success-soft: #bfe5dc;
+    --info-soft: #bfecf2;
+    --warning-soft: #f0e3c7;
+    --danger-soft: #eec7c7;
+    --black-soft: #fafafa;
+  }
+
+  .page-inner span.badge {
+    font-size: 0.75em;
+    line-height: 1em !important;
+  }
+
+  .page-inner.h1,
+  .page-inner h1 {
+    font-size: 2em !important;
+    font-weight: bold;
+  }
+
+  .page-inner.h2,
+  .page-inner h2 {
+    font-size: 1.6em !important;
+  }
+
+  .page-inner .h4,
+  .page-inner h4 {
+    font-size: 1.4em !important;
+    font-weight: bold;
+  }
+
+  .page-inner p {
+    line-height: 2em !important;
+    font-size: 1em !important;
+  }
+</style>
+<!-- =============================================== --
+    -- [FINAL] CONFIG - LARGURA DA TELA -->
+
+<!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
+  -- =============================================== -->
+<section class="multiuse-pages-section-socialbar">
+  <div class="socialbar">
+    <div class="social-link-group text-center">
+      <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/facebook.svg"
+          alt=""
+      /></a>
+
+      <a href="https://www.instagram.com/igrejadeuseamoroficial" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/instagram.svg"
+          alt=""
+      /></a>
+
+      <a
+        href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
+        target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/soundcloud.svg"
+          alt=""
+      /></a>
+
+      <a href="https://twitter.com/deusamoroficial" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/twitter.svg"
+          alt=""
+      /></a>
+    </div>
+  </div>
+</section>
+<style>
+  @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+  .multiuse-pages-section-socialbar {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+    display: inline-block;
+    margin: 0px auto;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: 0px solid #222;
+    transition: all linear 200ms;
+    line-height: 1.15;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group {
+    margin: 0;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+    display: inline-block;
+    margin: 0px auto;
+    padding: 10px 30px;
+    text-align: center;
+    color: var(--primary-color);
+    transition: all linear 200ms;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a:hover {
+    color: #ffffff;
+  }
+
+  .multiuse-pages-section-socialbar :hover.socialbar {
+    box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
+  }
+
+  .multiuse-pages-section-socialbar img {
+    height: 20px;
+    width: 20px;
+    display: flex;
+  }
+</style>
+<!-- =============================================== --
+-- [FINAL] SECTION - MIDIAS SOCIAIS -->
+
+<!-- [INÍCIO] SECTION - BANNER DIVIDER 2
+================================================== -->
+<section class="multiuse-pages-section-banner-divider2"></section>
+<style>
+  .multiuse-pages-section-banner-divider2 {
+    height: 350px;
+    background-image: url(https://i.ibb.co/3Mh5fCF/image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+</style>
+<!-- [FINAL] SECTION - BANNER DIVIDER
+================================================== -->
+
+<!-- [INÍCIO] SECTION - STORY
+================================================== -->
+<style>
+  .multiuse-pages-section-story .underline {
+    width: 100px;
+    height: 5px;
+    margin: 10px auto 50px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
+
+  .multiuse-pages-section-story .btn {
+    font-size: 1em !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+
+  .multiuse-pages-section-story .btn:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+
+  .multiuse-pages-section-story .blockquote {
+    border-left: 5px solid var(--primary-color);
+  }
+
+  .multiuse-pages-section-story {
+    background-color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+  }
+</style>
+<section class="multiuse-pages-section-story">
+  <div class="container-fluid">
+    <h1 class="font-weight-bold text-center h1">Testemunhos</h1>
+    <div class="underline"></div>
+
+    <!--Section description-->
+    <p class="text-left mb-5 mx-auto w-responsive lead">
+      Para alimentar e aumentar ainda mais a sua fé, leia e/ou ouça os
+      testemunhos que acontecem em nossa Igreja Pentecostal Deus é Amor.
+      Aproveite e escreva também o que Deus já realizou em sua vida.
+    </p>
+
+    <figure class="my-5">
+      <blockquote class="blockquote px-5">
+        <p>
+          “Jesus disse: Vai para tua casa, para os teus, e anuncie-lhes quão
+          grandes coisas o Senhor te fez e como teve misericórdia de ti”.
+        </p>
+        <figcaption class="blockquote-footer">
+          Marcos <cite title="Source Title">5.19</cite>
+        </figcaption>
+      </blockquote>
+    </figure>
+    <div>
+      <a
+        href="https://pt.surveymonkey.com/r/seutestemunho"
+        target="_blank"
+        class="btn m-2"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="currentColor"
+          class="bi bi-pencil me-1"
+          viewBox="0 0 18 18"
+        >
+          <path
+            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+          ></path>
+        </svg>
+        Envie Testemunhos</a
+      >
+      <a
+        href="https://soundcloud.com/deuseamoroficial/sets/testemunhos"
+        target="_blank"
+        class="btn m-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="currentColor"
+          class="bi bi-headphones me-1"
+          viewBox="0 0 18 18"
+        >
+          <path
+            d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"
+          ></path>
+        </svg>
+        Ouça Testemunhos</a
+      >
+      <a
+        href="https://deuseamor.inchurchteste.com/noticias?cat=1029"
+        target="_blank"
+        class="btn m-2"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="currentColor"
+          class="bi bi-eyeglasses me-1"
+          viewBox="0 0 18 18"
+        >
+          <path
+            d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
+          ></path>
+        </svg>
+        Leia Testemunhos</a
+      >
+    </div>
+  </div>
+</section>
+
+<style></style>
+<!-- [FINAL] SECTION - STORY
+  ================================================== -->
+
+<!-- [INÍCIO] SECTION - DETALHES
+================================================== -->
+<style>
+  .multiuse-pages-section-details {
+    background-color: #eeeeee;
+    padding: 80px 0;
+  }
+
+  .multiuse-pages-section-details img {
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px #0000002f;
+    box-shadow: 0px 5px 15px 0px #0000003f;
+    box-shadow: 0px 2px 7px 0px #0000004f;
+  }
+
+  .multiuse-pages-section-details .bio-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px 0px #3d3e851c;
+  }
+
+  .multiuse-pages-section-details .btn {
+    font-size: 1em !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+
+  .multiuse-pages-section-details .blockquote {
+    border-left: 5px solid var(--primary-color);
+  }
+
+  .multiuse-pages-section-details .btn:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+</style>
+
+<section class="multiuse-pages-section-details">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 bio">
+        <div class="bio-card p-5 m-3">
+          <h2 class="font-weight-bold h2">
+            Milagres do Senhor para a minha filha
+          </h2>
+          <figure class="my-5">
+            <blockquote class="blockquote px-5">
+              <p>Bruna dos Santos</p>
+              <figcaption class="blockquote-footer">
+                Itaipava, Itapemirim,
+                <cite title="Source Title"> Espírito Santo – Brasil</cite>
+              </figcaption>
+            </blockquote>
+          </figure>
+          <hr />
+          <p class="lead">
+            Eu tive minha primeira filha aos 16 anos. Ela nasceu com um pequeno
+            problema de saúde, causando sua morte com apenas 15 dias de nascida.
+            Mas, através das orações dos meus sogros (obreiros da IPDA), ela
+            ressuscitou. Logo descobri que ela nasceu com refluxo, o que me
+            deixou muito triste. Soube que a IPDA, na qual minha sogra congrega,
+            começaria uma campanha pelas manhãs, assim eu e ela a realizamos em
+            prol da cura da minha filha. Juntas, nós enfrentamos momentos muito
+            difíceis! Mesmo chovendo, por exemplo, levamos a recém-nascida à
+            igreja conosco. O médico havia lhe passado remédios que resultaram
+            em uma reação terrível, piorando a saúde da minha pequena. Mesmo com
+            todas essas tristezas, cremos que Jesus a curaria. Para glória de
+            Deus, minha filha tem oito anos, está curada e é cheia de saúde.
+            Mais uma vez, obrigada, Senhor, por este milagre!
+          </p>
+
+          <hr />
+          <div class="text-center pt-3">
+            <a
+              href="https://deuseamor.inchurchteste.com/noticias?cat=1029"
+              target="_blank"
+              class="btn"
+              >Ver mais testemunhos</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="bio-card p-5 m-3">
+          <h2 class="font-weight-bold h2">Ouça Testemunhos</h2>
+
+          <iframe
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/212849533&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
+            width="100%"
+            height="500"
+            frameborder="no"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [FINAL] SECTION - DETALHES
+================================================== -->

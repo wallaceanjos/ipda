@@ -1,0 +1,725 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- CSS only -->
+<link
+  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
+  rel="stylesheet"
+  crossorigin="anonymous"
+/>
+<!-- [INÍCIO] CONFIG BASICA
+  -- =============================================== -->
+<style>
+  body > .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  :root {
+    --primary-color: #3d3e85;
+    --secondary-color: #f4f4f4;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --white: #fff;
+    --gray: #687281;
+    --gray-dark: #323f52;
+    --primary: #0061f2;
+    --secondary: #6900c7;
+    --success: #00ac69;
+    --info: #00cfd5;
+    --warning: #f4a100;
+    --danger: #e81500;
+    --light: #eff3f9;
+    --dark: #171717;
+    --black: #000;
+    --white: #fff;
+    --red: #e81500;
+    --orange: #f76400;
+    --yellow: #f4a100;
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --blue: #0061f2;
+    --indigo: #5800e8;
+    --purple: #6900c7;
+    --pink: #e30059;
+    --red-soft: #eec7c7;
+    --orange-soft: #f1d6c7;
+    --yellow-soft: #f0e3c7;
+    --green-soft: #bfe5dc;
+    --teal-soft: #bfe8e5;
+    --cyan-soft: #bfecf2;
+    --blue-soft: #bfd6f8;
+    --indigo-soft: #d1c2f6;
+    --purple-soft: #d4c2ef;
+    --pink-soft: #edc2d9;
+    --primary-soft: #bfd6f8;
+    --secondary-soft: #d4c2ef;
+    --success-soft: #bfe5dc;
+    --info-soft: #bfecf2;
+    --warning-soft: #f0e3c7;
+    --danger-soft: #eec7c7;
+    --black-soft: #fafafa;
+  }
+
+  .page-inner span.badge {
+    font-size: 0.75em;
+    line-height: 1em !important;
+  }
+
+  .page-inner.h1,
+  .page-inner h1 {
+    font-size: 2em !important;
+    font-weight: bold;
+  }
+
+  .page-inner.h2,
+  .page-inner h2 {
+    font-size: 1.6em !important;
+  }
+
+  .page-inner .h4,
+  .page-inner h4 {
+    font-size: 1.4em !important;
+    font-weight: bold;
+  }
+
+  .page-inner p {
+    line-height: 2em !important;
+    font-size: 1em !important;
+  }
+</style>
+<!-- =============================================== --
+  -- [FINAL] CONFIG BASICA -->
+
+<!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
+  -- =============================================== -->
+<style>
+  @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+  .multiuse-pages-section-socialbar {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+    display: inline-block;
+    margin: 0px auto;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: 0px solid #222;
+    transition: all linear 200ms;
+    line-height: 1.15;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group {
+    margin: 0;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+    display: inline-block;
+    margin: 0px auto;
+    padding: 10px 30px;
+    text-align: center;
+    color: var(--primary-color);
+    transition: all linear 200ms;
+  }
+
+  .multiuse-pages-section-socialbar .socialbar .social-link-group a:hover {
+    color: #ffffff;
+  }
+
+  .multiuse-pages-section-socialbar :hover.socialbar {
+    box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
+  }
+
+  .multiuse-pages-section-socialbar img {
+    height: 20px;
+    width: 20px;
+    display: flex;
+  }
+</style>
+<section class="multiuse-pages-section-socialbar">
+  <div class="socialbar">
+    <div class="social-link-group text-center">
+      <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/facebook.svg"
+          alt=""
+      /></a>
+
+      <a href="https://www.instagram.com/igrejadeuseamoroficial" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/instagram.svg"
+          alt=""
+      /></a>
+
+      <a
+        href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
+        target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/soundcloud.svg"
+          alt=""
+      /></a>
+
+      <a href="https://twitter.com/deusamoroficial" target="blank"
+        ><img
+          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/twitter.svg"
+          alt=""
+      /></a>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================== --
+  -- [FINAL] SECTION - MIDIAS SOCIAIS -->
+
+<!-- [INÍCIO] SECTION - TEXT BLOCK
+-- =============================================== -->
+<style>
+  .multiuse-pages-section-story {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 80px 0 20px 0;
+  }
+  .multiuse-pages-section-story .underline {
+    width: 100px;
+    height: 5px;
+    margin: 10px auto 50px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
+</style>
+<section class="multiuse-pages-section-story">
+  <div class="container-fluid">
+    <h2 class="font-weight-bold text-center h2">Programação Sede</h2>
+    <div class="underline"></div>
+  </div>
+</section>
+
+<!-- [FINAL] SECTION - TEXT BLOCK
+  ================================================== -->
+
+<!-- [INÍCIO] SECTION - TABS PROGRAMAÇÃO
+  ================================================== -->
+<style>
+  .multiuse-pages-section-tabs {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 0 0 80px 0;
+  }
+
+  .multiuse-pages-section-tabs .bio-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px 0px #3d3e851c;
+  }
+
+  .accordion {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .accordion__content {
+    order: 1;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .accordion__label {
+    display: block;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #fafafa;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset 0px -2px 0px 0px #d1d2d3;
+  }
+
+  .accordion__radio {
+    display: none;
+  }
+
+  .accordion input[type='radio'] {
+    display: none;
+  }
+
+  .accordion input[type='radio'] + label {
+    color: var(--color-six);
+    z-index: 1;
+  }
+
+  .accordion input[type='radio']:checked + label {
+    background-color: white;
+    font-weight: 600;
+    box-shadow: inset 0px -6px 0px -2px #d1d2d3;
+  }
+
+  .accordion input[type='radio']:checked + label + .accordion__content {
+    display: flex;
+    margin-right: 0;
+    border-left: 0px solid #d1d2d3;
+    border-right: 0px solid #d1d2d3;
+    border-bottom: 0px solid #d1d2d3;
+    border-radius: 0 0 10px 10px;
+    background: #ffffff;
+  }
+
+  .accordion__content__image {
+    max-width: 100%;
+    max-height: 88%;
+    margin: 3%;
+    background-color: teal;
+  }
+
+  .accordion__content__text {
+    margin-top: 1%;
+    margin: 40px;
+  }
+
+  .accordion__content__text__title {
+    margin-top: 3%;
+  }
+
+  .accordion__content__text__body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+  }
+
+  @media (max-width: 1024px) {
+    .accordion {
+      border: 0px solid #d1d2d3;
+    }
+
+    .accordion-tab--status {
+      display: inline;
+    }
+
+    .accordion__content,
+    .accordion__label {
+      order: initial;
+    }
+
+    .accordion__content {
+      flex-direction: column;
+    }
+
+    .accordion__label {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2em;
+      padding: 16px 24px;
+    }
+
+    .accordion__label:last-child {
+    }
+
+    .accordion__content__image__container {
+      width: 100%;
+    }
+
+    .accordion__content__image {
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+    }
+
+    .accordion__content__text {
+      font-size: 0.9em;
+      margin: 4% 5% 4% 5%;
+    }
+
+    .accordion__content__text__title {
+      margin: 2% 0 2% 0;
+    }
+
+    .accordion__content__text__horizontal-line {
+      width: 100%;
+    }
+
+    .accordion input[type='radio'] + label span:after {
+      content: '+';
+    }
+
+    .accordion input[type='radio']:checked + label span:after {
+      content: '—';
+    }
+
+    .accordion input[type='radio']:checked + label {
+      border: none;
+    }
+
+    .accordion input[type='radio']:checked + label + .accordion {
+      border: none;
+    }
+
+    .accordion input[type='radio']:checked + label + .accordion__content {
+      border: none;
+    }
+  }
+</style>
+<section class="multiuse-pages-section-tabs">
+  <div class="container-fluid">
+    <div class="accordion">
+      <!-- tab1 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-one"
+        checked=""
+      />
+      <label class="accordion__label" for="tab-one"
+        >Domingo<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">Campanha de oração</h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light"
+                        >Todos os Domingos</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 15 horas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab2 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-two"
+      />
+      <label class="accordion__label" for="tab-two"
+        >Segunda-feira<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">Segunda do Pão</h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light"
+                        >Todas as Segundas</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 20 horas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab3 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-three"
+      />
+      <label class="accordion__label" for="tab-three"
+        >Terça-feira<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab4 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-four"
+      />
+      <label class="accordion__label" for="tab-four"
+        >Quarta-feira<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Quarta do Grande Mover de Deus
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light"
+                        >Todas as Quartas</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 15 horas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab5 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-five"
+      />
+      <label class="accordion__label" for="tab-five"
+        >Quinta-feira<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab6 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-six"
+      />
+      <label class="accordion__label" for="tab-six"
+        >Sexta-feira<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tab6 -->
+      <input
+        class="accordion__radio"
+        type="radio"
+        name="accordion-tabs"
+        id="tab-seven"
+      />
+      <label class="accordion__label" for="tab-seven"
+        >Sábado<span class="accordion-tab--status"></span
+      ></label>
+      <div class="accordion__content row p-0 m-0">
+        <div class="accordion__content__image__container">
+          <div class="accordion__content__text">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col-lg-4">
+                <div class="bio-card mb-4 rounded-3 mx-2">
+                  <div class="card-header py-3">
+                    <h5 class="my-0 fw-normal">
+                      Campanha Jesus nossa torre forte
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      <small class="text-muted fw-light">Todos os dias</small>
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Às 00 horas (meia-noite)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4"></div>
+
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [FINAL] SECTION - TABS PROGRAMAÇÃO
+  ================================================== -->

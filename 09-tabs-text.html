@@ -1,0 +1,271 @@
+<!-- [INÍCIO] SECTION - TABS
+  ================================================== -->
+<section class="multiuse-pages-section-tabs">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="accordion">
+        <!-- tab1 -->
+        <input
+          class="accordion__radio"
+          type="radio"
+          name="accordion-tabs"
+          id="tab-one"
+          checked
+        />
+        <label class="accordion__label" for="tab-one">
+          Segunda-feira
+          <span class="accordion-tab--status"></span>
+        </label>
+        <div class="accordion__content">
+          <div class="accordion__content__image__container"></div>
+
+          <div class="accordion__content__text">
+            <h3 class="accordion__content__text__title">
+              Khalid Ipsum
+            </h3>
+            <p class="accordion__content__text__body">
+              To be successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it. Give thanks to the most high. To be
+              successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it.
+            </p>
+            <p class="accordion__content__text__body">
+              The key to more success is to get a massage once a week, very
+              important, major key, cloth talk. How’s business? Boomin. Hammock
+              talk come soon. To be successful you’ve got to work hard, to make
+              history, simple, you’ve got to make it. Hammock talk come soon.
+            </p>
+          </div>
+        </div>
+
+        <!-- tab2 -->
+        <input
+          class="accordion__radio"
+          type="radio"
+          name="accordion-tabs"
+          id="tab-two"
+          checked
+        />
+        <label class="accordion__label" for="tab-two">
+          Quarta-feira
+          <span class="accordion-tab--status"></span>
+        </label>
+        <div class="accordion__content">
+          <div class="accordion__content__image__container"></div>
+
+          <div class="accordion__content__text">
+            <h3 class="accordion__content__text__title">
+              Khalid Ipsum
+            </h3>
+            <p class="accordion__content__text__body">
+              To be successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it. Give thanks to the most high. To be
+              successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it.
+            </p>
+            <p class="accordion__content__text__body">
+              The key to more success is to get a massage once a week, very
+              important, major key, cloth talk. How’s business? Boomin. Hammock
+              talk come soon. To be successful you’ve got to work hard, to make
+              history, simple, you’ve got to make it. Hammock talk come soon.
+            </p>
+          </div>
+        </div>
+
+        <!-- tab3 -->
+        <input
+          class="accordion__radio"
+          type="radio"
+          name="accordion-tabs"
+          id="tab-three"
+          checked
+        />
+        <label class="accordion__label" for="tab-three">
+          Domingo
+          <span class="accordion-tab--status"></span>
+        </label>
+        <div class="accordion__content">
+          <div class="accordion__content__image__container"></div>
+
+          <div class="accordion__content__text">
+            <h3 class="accordion__content__text__title">
+              Khalid Ipsum
+            </h3>
+            <p class="accordion__content__text__body">
+              To be successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it. Give thanks to the most high. To be
+              successful you’ve got to work hard, to make history, simple,
+              you’ve got to make it.
+            </p>
+            <p class="accordion__content__text__body">
+              The key to more success is to get a massage once a week, very
+              important, major key, cloth talk. How’s business? Boomin. Hammock
+              talk come soon. To be successful you’ve got to work hard, to make
+              history, simple, you’ve got to make it. Hammock talk come soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .multiuse-pages-section-tabs {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .accordion {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+  }
+
+  .accordion__content {
+    order: 1;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .accordion__label {
+    display: block;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    padding: 1% 5% 1% 5%;
+    background-color: #fafafa;
+    margin-right: 1px;
+    box-shadow: inset 0px -2px 0px 0px #d1d2d3;
+  }
+
+  .accordion__radio {
+    display: none;
+  }
+
+  .accordion input[type='radio'] {
+    display: none;
+  }
+
+  .accordion input[type='radio'] + label {
+    color: var(--color-six);
+    z-index: 1;
+  }
+
+  .accordion input[type='radio']:checked + label {
+    background-color: white;
+    font-weight: 600;
+    box-shadow: inset 0px -6px 0px -2px #d1d2d3;
+  }
+  .accordion input[type='radio']:checked + label + .accordion__content {
+    display: flex;
+    margin-right: 0;
+    border-left: 0px solid #d1d2d3;
+    border-right: 0px solid #d1d2d3;
+    border-bottom: 0px solid #d1d2d3;
+  }
+
+  .accordion__content__image {
+    max-width: 100%;
+    max-height: 88%;
+    margin: 3%;
+    background-color: teal;
+  }
+
+  .accordion__content__text {
+    margin-top: 1%;
+    margin: 40px;
+  }
+
+  .accordion__content__text__title {
+    margin-top: 3%;
+  }
+
+  .accordion__content__text__body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+  }
+
+  @media (max-width: 900px) {
+    .accordion {
+      border: 0px solid #d1d2d3;
+    }
+
+    .accordion-tab--status {
+      display: inline;
+    }
+    .accordion__content,
+    .accordion__label {
+      order: initial;
+    }
+
+    .accordion__content {
+      flex-direction: column;
+    }
+
+    .accordion__label {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2em;
+      padding: 5% 6% 5% 6%;
+    }
+
+    .accordion__label:last-child {
+      background-color: magenta;
+    }
+
+    .accordion__content__image__container {
+      width: 100%;
+    }
+
+    .accordion__content__image {
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+    }
+
+    .accordion__content__text {
+      font-size: 0.9em;
+      margin: 4% 5% 4% 5%;
+    }
+
+    .accordion__content__text__title {
+      margin: 2% 0 2% 0;
+    }
+
+    .accordion__content__text__horizontal-line {
+      width: 100%;
+    }
+
+    .accordion input[type='radio'] + label span:after {
+      content: '+';
+    }
+
+    .accordion input[type='radio']:checked + label span:after {
+      content: '—';
+    }
+
+    .accordion input[type='radio']:checked + label {
+      border: none;
+    }
+
+    .accordion input[type='radio']:checked + label + .accordion {
+      border: none;
+    }
+
+    .accordion input[type='radio']:checked + label + .accordion__content {
+      border: none;
+    }
+  }
+</style>
+<!-- [FINAL] SECTION - TABS
+  ================================================== -->

@@ -1,0 +1,35 @@
+<!-- [INÍCIO] SECTION - CARREGAMENTO
+  ================================================== -->
+<section class="multiuse-pages-section-loadbar"></section>
+<style>
+  .multiuse-pages-section-loadbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    animation-name: loadbar;
+    animation-duration: 5s;
+  }
+  @keyframes loadbar {
+    0% {
+      background-color: #ff7500;
+      width: 0;
+      height: 4px;
+      opacity: 0.3;
+    }
+    95% {
+      background-color: #ff7500;
+      opacity: 1;
+      height: 4px;
+      width: 100%;
+    }
+    100% {
+      background-color: #ff7500;
+      height: 0;
+      opacity: 1;
+    }
+  }
+</style>
+<!-- [FINAL] SECTION - CARREGAMENTO
+  ================================================== -->
