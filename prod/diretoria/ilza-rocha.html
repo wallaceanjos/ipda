@@ -1,105 +1,109 @@
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
-  rel="stylesheet"
-  crossorigin="anonymous"
-/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css" rel="stylesheet" crossorigin="anonymous">
 
 <!-- [INÍCIO] CONFIG - LARGURA DA TELA
   -- =============================================== -->
-<style>
-  body > .container {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  :root {
-    --primary-color: #3d3e85;
-    --secondary-color: #f4f4f4;
-    --blue: #0061f2;
-    --indigo: #5800e8;
-    --purple: #6900c7;
-    --pink: #e30059;
-    --red: #e81500;
-    --orange: #f76400;
-    --yellow: #f4a100;
-    --green: #00ac69;
-    --teal: #00ba94;
-    --cyan: #00cfd5;
-    --white: #fff;
-    --gray: #687281;
-    --gray-dark: #323f52;
-    --primary: #0061f2;
-    --secondary: #6900c7;
-    --success: #00ac69;
-    --info: #00cfd5;
-    --warning: #f4a100;
-    --danger: #e81500;
-    --light: #eff3f9;
-    --dark: #171717;
-    --black: #000;
-    --white: #fff;
-    --red: #e81500;
-    --orange: #f76400;
-    --yellow: #f4a100;
-    --green: #00ac69;
-    --teal: #00ba94;
-    --cyan: #00cfd5;
-    --blue: #0061f2;
-    --indigo: #5800e8;
-    --purple: #6900c7;
-    --pink: #e30059;
-    --red-soft: #eec7c7;
-    --orange-soft: #f1d6c7;
-    --yellow-soft: #f0e3c7;
-    --green-soft: #bfe5dc;
-    --teal-soft: #bfe8e5;
-    --cyan-soft: #bfecf2;
-    --blue-soft: #bfd6f8;
-    --indigo-soft: #d1c2f6;
-    --purple-soft: #d4c2ef;
-    --pink-soft: #edc2d9;
-    --primary-soft: #bfd6f8;
-    --secondary-soft: #d4c2ef;
-    --success-soft: #bfe5dc;
-    --info-soft: #bfecf2;
-    --warning-soft: #f0e3c7;
-    --danger-soft: #eec7c7;
-    --black-soft: #fafafa;
-  }
-
-  .page-inner span.badge {
-    font-size: 0.75em;
-    line-height: 1em !important;
-  }
-
-  .page-inner.h1,
-  .page-inner h1 {
-    font-size: 2em !important;
-    font-weight: bold;
-  }
-
-  .page-inner.h2,
-  .page-inner h2 {
-    font-size: 1.6em !important;
-  }
-
-  .page-inner .h4,
-  .page-inner h4 {
-    font-size: 1.4em !important;
-    font-weight: bold;
-  }
-
-  .page-inner p {
-    line-height: 2em !important;
-    font-size: 1em !important;
-  }
-</style>
+  <style>
+    .page.container.row {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      max-width: 1920px;
+    }
+    .page.container.row .page-inner{
+      margin: 0;
+    }
+    :root {
+      --primary-color: #3d3e85;
+      --primary: #3d3e85;
+      --secondary-color: #f4f4f4;
+      --secondary: #f4f4f4;
+      --blue: #0061f2;
+      --indigo: #5800e8;
+      --purple: #6900c7;
+      --pink: #e30059;
+      --red: #e81500;
+      --orange: #f76400;
+      --yellow: #f4a100;
+      --green: #00ac69;
+      --teal: #00ba94;
+      --cyan: #00cfd5;
+      --white: #fff;
+      --gray: #687281;
+      --gray-dark: #323f52;
+      --success: #00ac69;
+      --info: #00cfd5;
+      --warning: #f4a100;
+      --danger: #e81500;
+      --light: #eff3f9;
+      --dark: #171717;
+      --black: #000;
+      --white: #fff;
+      --red: #e81500;
+      --orange: #f76400;
+      --yellow: #f4a100;
+      --green: #00ac69;
+      --teal: #00ba94;
+      --cyan: #00cfd5;
+      --blue: #0061f2;
+      --indigo: #5800e8;
+      --purple: #6900c7;
+      --pink: #e30059;
+      --red-soft: #eec7c7;
+      --orange-soft: #f1d6c7;
+      --yellow-soft: #f0e3c7;
+      --green-soft: #bfe5dc;
+      --teal-soft: #bfe8e5;
+      --cyan-soft: #bfecf2;
+      --blue-soft: #bfd6f8;
+      --indigo-soft: #d1c2f6;
+      --purple-soft: #d4c2ef;
+      --pink-soft: #edc2d9;
+      --primary-soft: #bfd6f8;
+      --secondary-soft: #d4c2ef;
+      --success-soft: #bfe5dc;
+      --info-soft: #bfecf2;
+      --warning-soft: #f0e3c7;
+      --danger-soft: #eec7c7;
+      --black-soft: #fafafa;
+      
+      --bs-success-rgb: 0, 172, 105;
+      --bs-primary-rgb: 61, 62, 133;
+      --bs-light-rgb: 248, 249, 250;
+    }
+  
+    .page-inner span.badge {
+      font-size: 0.75em;
+      line-height: 1em !important;
+    }
+  
+    .page-inner.h1,
+    .page-inner h1 {
+      font-size: 2em !important;
+      font-weight: bold;
+    }
+  
+    .page-inner.h2,
+    .page-inner h2 {
+      font-size: 1.6em !important;
+    }
+  
+    .page-inner .h4,
+    .page-inner h4 {
+      font-size: 1.4em !important;
+      font-weight: bold;
+    }
+  
+    .page-inner p {
+      line-height: 2em !important;
+      font-size: 1em !important;
+    }
+  </style>
 <!-- =============================================== --
     -- [FINAL] CONFIG - LARGURA DA TELA -->
-
+<div class="mds-bootstrap-5">
 <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
   -- =============================================== -->
 <section class="multiuse-pages-section-socialbar">
@@ -107,13 +111,13 @@
     <div class="social-link-group text-center">
       <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/facebook.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
           alt=""
       /></a>
 
       <a href="https://www.instagram.com/igrejadeuseamoroficial" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/instagram.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
           alt=""
       /></a>
 
@@ -121,13 +125,13 @@
         href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
         target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/soundcloud.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
           alt=""
       /></a>
 
       <a href="https://twitter.com/deusamoroficial" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/twitter.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
           alt=""
       /></a>
     </div>
@@ -217,99 +221,102 @@
 
 <section class="multiuse-pages-section-bio">
   <div class="container-fluid">
-    <div class="row no-gutters align-items-top">
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <!-- Card -->
-        <div class="p-5 text-center">
-          <!-- Background color -->
-          <div
-            class="card-up peach-gradient"
-            style="border-radius: 5px 0 0 0"
-          ></div>
-          <!-- Avatar -->
-          <div class="avatar mx-auto white">
-            <span
-              style="
-                background-image: url('https://i.ibb.co/zQ3w0Ms/image.png');
-              "
-            ></span>
+    <div class="container">
+      <div class="row no-gutters align-items-top">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+          <!-- Card -->
+          <div class="p-5 text-center">
+            <!-- Background color -->
+            <div
+              class="card-up peach-gradient"
+              style="border-radius: 5px 0 0 0"
+            ></div>
+            <!-- Avatar -->
+            <div class="avatar mx-auto white">
+              <span
+                style="
+                  background-image: url('https://i.ibb.co/zQ3w0Ms/image.png');
+                "
+              ></span>
+            </div>
+            <!-- Content -->
+            <div class="card-body">
+              <!-- Name -->
+              <h1 class="font-weight-bold text-center h1">Ilza Rocha</h1>
+              <p class="text-center">VICE PRESIDENTE DO CONSELHO EXECUTIVO</p>
+              <div class="underline"></div>
+              <!-- Quotation -->
+              <p></p>
+            </div>
           </div>
-          <!-- Content -->
-          <div class="card-body">
-            <!-- Name -->
-            <h1 class="font-weight-bold text-center h1">Ilza Rocha</h1>
-            <p class="text-center">VICE PRESIDENTE DO CONSELHO EXECUTIVO</p>
-            <div class="underline"></div>
-            <!-- Quotation -->
-            <p></p>
+          <!-- Card -->
+        </div>
+  
+        <div class="col-lg-5">
+          <div class="text-start py-4">
+            <span class="badge rounded-pill bg-light text-dark">Contato</span>
           </div>
+  
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" style="max-width: 200px;">Responde por parte da Europa<br /></th>
+                <th scope="col">Contato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  Noruega, Suécia, Dinamarca, República da Irlanda, Irlanda do
+                  Norte, Inglaterra, Bélgica, Holanda, Luxemburgo, Alemanha,
+                  Polônia
+                </td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td><code>ilza.exterior@ipda.com.br</code></td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td><code>apoio.europanorte@ipda.com.br</code></td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" style="max-width: 200px;">Responde pelo Sul do Brasil:</th>
+                <th scope="col">Contato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Email:</td>
+                <td><code>apoiosul@ipda.com.br</code></td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" style="max-width: 200px;">Assessor Pessoal:</th>
+                <th scope="col">Contato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Email:</td>
+                <td><code>assessoria.sul@ipda.com.br</code></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!-- Card -->
-      </div>
-
-      <div class="col-lg-5">
-        <div class="text-start py-4">
-          <span class="badge rounded-pill bg-light text-dark">Contato</span>
-        </div>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Responde por parte da Europa<br /></th>
-              <th scope="col">Contato</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="2">
-                Noruega, Suécia, Dinamarca, República da Irlanda, Irlanda do
-                Norte, Inglaterra, Bélgica, Holanda, Luxemburgo, Alemanha,
-                Polônia
-              </td>
-            </tr>
-            <tr>
-              <td>Email:</td>
-              <td><code>ilza.exterior@ipda.com.br</code></td>
-            </tr>
-            <tr>
-              <td>Email:</td>
-              <td><code>apoio.europanorte@ipda.com.br</code></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Responde pelo Sul do Brasil:</th>
-              <th scope="col">Contato</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Email:</td>
-              <td><code>apoiosul@ipda.com.br</code></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Assessor Pessoal:</th>
-              <th scope="col">Contato</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Email:</td>
-              <td><code>assessoria.sul@ipda.com.br</code></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>
 </section>
 <!-- [FINAL] SECTION - BIOGRAFIA
   ================================================== -->
+</div>

@@ -1,105 +1,102 @@
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
-  rel="stylesheet"
-  crossorigin="anonymous"
-/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css" rel="stylesheet" crossorigin="anonymous">
 
 <!-- [INÍCIO] CONFIG - LARGURA DA TELA
   -- =============================================== -->
-<style>
-  body > .container {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  :root {
-    --primary-color: #3d3e85;
-    --primary: #3d3e85;
-    --secondary-color: #f4f4f4;
-    --secondary: #f4f4f4;
-    --blue: #0061f2;
-    --indigo: #5800e8;
-    --purple: #6900c7;
-    --pink: #e30059;
-    --red: #e81500;
-    --orange: #f76400;
-    --yellow: #f4a100;
-    --green: #00ac69;
-    --teal: #00ba94;
-    --cyan: #00cfd5;
-    --white: #fff;
-    --gray: #687281;
-    --gray-dark: #323f52;
-    --success: #00ac69;
-    --info: #00cfd5;
-    --warning: #f4a100;
-    --danger: #e81500;
-    --light: #eff3f9;
-    --dark: #171717;
-    --black: #000;
-    --white: #fff;
-    --red: #e81500;
-    --orange: #f76400;
-    --yellow: #f4a100;
-    --green: #00ac69;
-    --teal: #00ba94;
-    --cyan: #00cfd5;
-    --blue: #0061f2;
-    --indigo: #5800e8;
-    --purple: #6900c7;
-    --pink: #e30059;
-    --red-soft: #eec7c7;
-    --orange-soft: #f1d6c7;
-    --yellow-soft: #f0e3c7;
-    --green-soft: #bfe5dc;
-    --teal-soft: #bfe8e5;
-    --cyan-soft: #bfecf2;
-    --blue-soft: #bfd6f8;
-    --indigo-soft: #d1c2f6;
-    --purple-soft: #d4c2ef;
-    --pink-soft: #edc2d9;
-    --primary-soft: #bfd6f8;
-    --secondary-soft: #d4c2ef;
-    --success-soft: #bfe5dc;
-    --info-soft: #bfecf2;
-    --warning-soft: #f0e3c7;
-    --danger-soft: #eec7c7;
-    --black-soft: #fafafa;
-  }
-
-  .page-inner span.badge {
-    font-size: 0.75em;
-    line-height: 1em !important;
-  }
-
-  .page-inner.h1,
-  .page-inner h1 {
-    font-size: 2em !important;
-    font-weight: bold;
-  }
-
-  .page-inner.h2,
-  .page-inner h2 {
-    font-size: 1.6em !important;
-  }
-
-  .page-inner .h4,
-  .page-inner h4 {
-    font-size: 1.4em !important;
-    font-weight: bold;
-  }
-
-  .page-inner p {
-    line-height: 2em !important;
-    font-size: 1em !important;
-  }
-</style>
+  <style>
+    .page.container.row {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      max-width: 1920px;
+    }
+    :root {
+      --primary-color: #3d3e85;
+      --primary: #3d3e85;
+      --secondary-color: #f4f4f4;
+      --secondary: #f4f4f4;
+      --blue: #0061f2;
+      --indigo: #5800e8;
+      --purple: #6900c7;
+      --pink: #e30059;
+      --red: #e81500;
+      --orange: #f76400;
+      --yellow: #f4a100;
+      --green: #00ac69;
+      --teal: #00ba94;
+      --cyan: #00cfd5;
+      --white: #fff;
+      --gray: #687281;
+      --gray-dark: #323f52;
+      --success: #00ac69;
+      --info: #00cfd5;
+      --warning: #f4a100;
+      --danger: #e81500;
+      --light: #eff3f9;
+      --dark: #171717;
+      --black: #000;
+      --white: #fff;
+      --red: #e81500;
+      --orange: #f76400;
+      --yellow: #f4a100;
+      --green: #00ac69;
+      --teal: #00ba94;
+      --cyan: #00cfd5;
+      --blue: #0061f2;
+      --indigo: #5800e8;
+      --purple: #6900c7;
+      --pink: #e30059;
+      --red-soft: #eec7c7;
+      --orange-soft: #f1d6c7;
+      --yellow-soft: #f0e3c7;
+      --green-soft: #bfe5dc;
+      --teal-soft: #bfe8e5;
+      --cyan-soft: #bfecf2;
+      --blue-soft: #bfd6f8;
+      --indigo-soft: #d1c2f6;
+      --purple-soft: #d4c2ef;
+      --pink-soft: #edc2d9;
+      --primary-soft: #bfd6f8;
+      --secondary-soft: #d4c2ef;
+      --success-soft: #bfe5dc;
+      --info-soft: #bfecf2;
+      --warning-soft: #f0e3c7;
+      --danger-soft: #eec7c7;
+      --black-soft: #fafafa;
+    }
+  
+    .page-inner span.badge {
+      font-size: 0.75em;
+      line-height: 1em !important;
+    }
+  
+    .page-inner.h1,
+    .page-inner h1 {
+      font-size: 2em !important;
+      font-weight: bold;
+    }
+  
+    .page-inner.h2,
+    .page-inner h2 {
+      font-size: 1.6em !important;
+    }
+  
+    .page-inner .h4,
+    .page-inner h4 {
+      font-size: 1.4em !important;
+      font-weight: bold;
+    }
+  
+    .page-inner p {
+      line-height: 2em !important;
+      font-size: 1em !important;
+    }
+  </style>
 <!-- =============================================== --
     -- [FINAL] CONFIG - LARGURA DA TELA -->
-
+<div class="mds-bootstrap-5">
 <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
   -- =============================================== -->
 <section class="multiuse-pages-section-socialbar">
@@ -107,13 +104,13 @@
     <div class="social-link-group text-center">
       <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/facebook.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
           alt=""
       /></a>
 
       <a href="https://www.instagram.com/igrejadeuseamoroficial" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/instagram.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
           alt=""
       /></a>
 
@@ -121,13 +118,13 @@
         href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
         target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/soundcloud.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
           alt=""
       /></a>
 
       <a href="https://twitter.com/deusamoroficial" target="blank"
         ><img
-          src="https://deuseamor.inchurchteste.com/assets/deuseamor/images/twitter.svg"
+          src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
           alt=""
       /></a>
     </div>
@@ -199,6 +196,15 @@
     background-position: center center;
     background-size: cover;
   }
+  @media (min-width: 600px) {
+    .multiuse-pages-section-banner-divider2 {
+      height: 350px;
+      background-image: url(https://i.ibb.co/WFjhMmb/image.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+  }
 </style>
 <!-- [FINAL] SECTION - BANNER DIVIDER
 ================================================== -->
@@ -234,38 +240,41 @@
 </style>
 <section class="multiuse-pages-section-story">
   <div class="container-fluid">
-    <h1 class="font-weight-bold text-center h1">
-      Mocidade Unforgettable Praise
-    </h1>
+    <div class="container">
 
-    <div class="underline"></div>
+      <h1 class="font-weight-bold text-center h1">
+        Mocidade Unforgettable Praise
+      </h1>
 
-    <!--Section description-->
-    <p class="text-left mb-5 mx-auto w-responsive lead">
-      A Mocidade Unforgettable Praise preza os hinos espirituais a Jesus Cristo,
-      os quais são resultantes de almas salvas e restauradas, através dos
-      Louvores, Palavra de Deus, Palestras, Dinâmicas Espirituais e Oração.
-    </p>
-    <p class="text-left mx-auto w-responsive lead">
-      <a
-        href="http://www.ipda.com.br/contato-2/"
-        target="_blank"
-        class="btn mx-2"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-envelope-fill me-1 mb-1"
-          viewBox="0 0 16 16"
+      <div class="underline"></div>
+
+      <!--Section description-->
+      <p class="text-left mb-5 mx-auto w-responsive lead">
+        A Mocidade Unforgettable Praise preza os hinos espirituais a Jesus Cristo,
+        os quais são resultantes de almas salvas e restauradas, através dos
+        Louvores, Palavra de Deus, Palestras, Dinâmicas Espirituais e Oração.
+      </p>
+      <p class="text-center mx-auto w-responsive lead">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeQJjSkF33E_qg-qnM9LBcRaGBHxrpU271HDLfRaxEC5BhX6w/viewform"
+          target="_blank"
+          class="btn mx-2"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope-fill me-1 mb-1"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+            ></path>
+          </svg>
+          Contato</a
         >
-          <path
-            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
-          ></path>
-        </svg>
-        Contato</a
-      >
-    </p>
+      </p>
+    </div>
   </div>
 </section>
 <!-- [FINAL] SECTION - STORY
@@ -307,69 +316,71 @@
 
 <section class="multiuse-pages-section-details">
   <div class="container-fluid">
-    <div class="row pt-5">
-      <div class="col-md-7">
-        <h2 class="font-weight-bold h2 mt-5">Sobre o Unforgottable Praise</h2>
-        <p class="lead me-md-5">
-          A Mocidade Unforgettable Praise é composta por adolescentes e jovens
-          que acreditam no poder do Espírito Santo para transformar vidas; por
-          isso, se dedicam nos ensaios para, especialmente, estarem
-          comprometidos a exaltar o nome do Todo-Poderoso com alegria,
-          sinceridade e amor.
-        </p>
-
-        <figure class="my-5">
-          <blockquote class="blockquote px-5">
-            <p>
-              “E saiu uma voz do trono, que dizia: Louvai o nosso Deus, vós,
-              todos os seus servos, e vós que O temei, tanto pequenos como
-              grandes.”
-            </p>
-            <figcaption class="blockquote-footer">
-              Apocalipse <cite title="Source Title">19.5</cite>
-            </figcaption>
-          </blockquote>
-        </figure>
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-md-7">
+          <h2 class="font-weight-bold h2 mt-5">Sobre o Unforgottable Praise</h2>
+          <p class="lead me-md-5">
+            A Mocidade Unforgettable Praise é composta por adolescentes e jovens
+            que acreditam no poder do Espírito Santo para transformar vidas; por
+            isso, se dedicam nos ensaios para, especialmente, estarem
+            comprometidos a exaltar o nome do Todo-Poderoso com alegria,
+            sinceridade e amor.
+          </p>
+  
+          <figure class="my-5">
+            <blockquote class="blockquote px-5">
+              <p>
+                “E saiu uma voz do trono, que dizia: Louvai o nosso Deus, vós,
+                todos os seus servos, e vós que O temei, tanto pequenos como
+                grandes.”
+              </p>
+              <figcaption class="blockquote-footer">
+                Apocalipse <cite title="Source Title">19.5</cite>
+              </figcaption>
+            </blockquote>
+          </figure>
+        </div>
+        <div class="col-md-5">
+          <img
+            src="https://i.ibb.co/6gWTJq4/image.png"
+            class="
+              bd-placeholder-img bd-placeholder-img-lg
+              featurette-image
+              img-fluid
+              mx-auto
+              my-5
+            "
+          />
+        </div>
       </div>
-      <div class="col-md-5">
-        <img
-          src="https://i.ibb.co/6gWTJq4/image.png"
-          class="
-            bd-placeholder-img bd-placeholder-img-lg
-            featurette-image
-            img-fluid
-            mx-auto
-            my-5
-          "
-        />
-      </div>
-    </div>
-
-    <div class="row pt-5">
-      <div class="col-md-7 order-md-2">
-        <h2 class="font-weight-bold h2 mt-5 ms-md-5">Junte-se a nós</h2>
-        <p class="lead ms-md-5">
-          Venha fazer parte, você e sua família são muito bem-vindos, esperamos
-          pela sua presença.
-        </p>
-
-        <p class="lead ms-md-5">
-          Os cultos da mocidade ocorrem todos os sábados a partir das 19h00 no
-          Templo da Glória de Deus, localizado na Avenida do Estado, 4568,
-          Liberdade, São Paulo/SP.
-        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img
-          src="https://i.ibb.co/SB21xmQ/image.png"
-          class="
-            bd-placeholder-img bd-placeholder-img-lg
-            featurette-image
-            img-fluid
-            mx-auto
-            my-5
-          "
-        />
+  
+      <div class="row pt-5">
+        <div class="col-md-7 order-md-2">
+          <h2 class="font-weight-bold h2 mt-5 ms-md-5">Junte-se a nós</h2>
+          <p class="lead ms-md-5">
+            Venha fazer parte, você e sua família são muito bem-vindos, esperamos
+            pela sua presença.
+          </p>
+  
+          <p class="lead ms-md-5">
+            Os cultos da mocidade ocorrem todos os sábados a partir das 19h00 no
+            Templo da Glória de Deus, localizado na Avenida do Estado, 4568,
+            Liberdade, São Paulo/SP.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img
+            src="https://i.ibb.co/SB21xmQ/image.png"
+            class="
+              bd-placeholder-img bd-placeholder-img-lg
+              featurette-image
+              img-fluid
+              mx-auto
+              my-5
+            "
+          />
+        </div>
       </div>
     </div>
   </div>
