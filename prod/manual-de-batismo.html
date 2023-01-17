@@ -1,343 +1,411 @@
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
-  rel="stylesheet"
-  crossorigin="anonymous"
-/>
-
-<!-- [INÍCIO] CONFIG - LARGURA DA TELA
-  -- =============================================== -->
-  <style>
-    .page.container.row {
-      margin: 0 auto;
-      padding: 0;
-      width: 100%;
-      max-width: 1920px;
-    }
-    :root {
-      --primary-color: #3d3e85;
-      --primary: #3d3e85;
-      --secondary-color: #f4f4f4;
-      --secondary: #f4f4f4;
-      --blue: #0061f2;
-      --indigo: #5800e8;
-      --purple: #6900c7;
-      --pink: #e30059;
-      --red: #e81500;
-      --orange: #f76400;
-      --yellow: #f4a100;
-      --green: #00ac69;
-      --teal: #00ba94;
-      --cyan: #00cfd5;
-      --white: #fff;
-      --gray: #687281;
-      --gray-dark: #323f52;
-      --success: #00ac69;
-      --info: #00cfd5;
-      --warning: #f4a100;
-      --danger: #e81500;
-      --light: #eff3f9;
-      --dark: #171717;
-      --black: #000;
-      --white: #fff;
-      --red: #e81500;
-      --orange: #f76400;
-      --yellow: #f4a100;
-      --green: #00ac69;
-      --teal: #00ba94;
-      --cyan: #00cfd5;
-      --blue: #0061f2;
-      --indigo: #5800e8;
-      --purple: #6900c7;
-      --pink: #e30059;
-      --red-soft: #eec7c7;
-      --orange-soft: #f1d6c7;
-      --yellow-soft: #f0e3c7;
-      --green-soft: #bfe5dc;
-      --teal-soft: #bfe8e5;
-      --cyan-soft: #bfecf2;
-      --blue-soft: #bfd6f8;
-      --indigo-soft: #d1c2f6;
-      --purple-soft: #d4c2ef;
-      --pink-soft: #edc2d9;
-      --primary-soft: #bfd6f8;
-      --secondary-soft: #d4c2ef;
-      --success-soft: #bfe5dc;
-      --info-soft: #bfecf2;
-      --warning-soft: #f0e3c7;
-      --danger-soft: #eec7c7;
-      --black-soft: #fafafa;
-    }
-  
-    .page-inner span.badge {
-      font-size: 0.75em;
-      line-height: 1em !important;
-    }
-  
-    .page-inner.h1,
-    .page-inner h1 {
-      font-size: 2em !important;
-      font-weight: bold;
-    }
-  
-    .page-inner.h2,
-    .page-inner h2 {
-      font-size: 1.6em !important;
-    }
-  
-    .page-inner .h4,
-    .page-inner h4 {
-      font-size: 1.4em !important;
-      font-weight: bold;
-    }
-  
-    .page-inner p {
-      line-height: 2em !important;
-      font-size: 1em !important;
-    }
-  </style>
-<!-- =============================================== --
-    -- [FINAL] CONFIG - LARGURA DA TELA -->
-<div class="mds-bootstrap-5">
-  <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
-  -- =============================================== -->
-  <section class="multiuse-pages-section-socialbar">
-    <div class="socialbar">
-      <div class="loading-animation"></div>
-      <div class="social-link-group text-center">
-        <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
-          ><img
-            src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
-            alt=""
-        /></a>
-
-        <a
-          href="https://www.instagram.com/igrejadeuseamoroficial"
-          target="blank"
-          ><img
-            src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
-            alt=""
-        /></a>
-
-        <a
-          href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
-          target="blank"
-          ><img
-            src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
-            alt=""
-        /></a>
-
-        <a href="https://twitter.com/deusamoroficial" target="blank"
-          ><img
-            src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
-            alt=""
-        /></a>
-      </div>
-    </div>
-  </section>
-  <style>
-    @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
-
-    /* loading animation begin */
-    @keyframes loadbar {
-      0% {
-        background-color: var(--primary-color);
-        width: 0;
-        height: 4px;
-        opacity: 0.3;
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>InChurch</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://s3-sa-east-1.amazonaws.com/inradar.media/font-face/font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        position: relative;
+        padding: 0;
+        margin: 0;
       }
-
-      97% {
-        background-color: var(--primary-color);
-        opacity: 1;
-        height: 4px;
+      div.container {
         width: 100%;
+        margin: 0 auto;
+        position: relative !important;
+        top: 0;
+        left: 0;
+        min-height: auto;
+        width: 100%;
+        max-width: 100% !important;
+        font-family: 'Circular Std' !important;
+        font-size: 17px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      pre,
+      img,
+      ul,
+      ol,
+      blockquote {
+      }
+      pre {
+        display: inline-block;
+        width: 100%;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word;
+      }
+      ​ pre span {
+      }
+      ​ img {
+        max-width: 100% !important;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- [INÍCIO] CONFIG - LARGURA DA TELA
+  -- =============================================== -->
+    <style>
+      .page.container.row {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        max-width: 1920px;
+      }
+      :root {
+        --primary-color: #3d3e85;
+        --primary: #3d3e85;
+        --secondary-color: #f4f4f4;
+        --secondary: #f4f4f4;
+        --blue: #0061f2;
+        --indigo: #5800e8;
+        --purple: #6900c7;
+        --pink: #e30059;
+        --red: #e81500;
+        --orange: #f76400;
+        --yellow: #f4a100;
+        --green: #00ac69;
+        --teal: #00ba94;
+        --cyan: #00cfd5;
+        --white: #fff;
+        --gray: #687281;
+        --gray-dark: #323f52;
+        --success: #00ac69;
+        --info: #00cfd5;
+        --warning: #f4a100;
+        --danger: #e81500;
+        --light: #eff3f9;
+        --dark: #171717;
+        --black: #000;
+        --white: #fff;
+        --red: #e81500;
+        --orange: #f76400;
+        --yellow: #f4a100;
+        --green: #00ac69;
+        --teal: #00ba94;
+        --cyan: #00cfd5;
+        --blue: #0061f2;
+        --indigo: #5800e8;
+        --purple: #6900c7;
+        --pink: #e30059;
+        --red-soft: #eec7c7;
+        --orange-soft: #f1d6c7;
+        --yellow-soft: #f0e3c7;
+        --green-soft: #bfe5dc;
+        --teal-soft: #bfe8e5;
+        --cyan-soft: #bfecf2;
+        --blue-soft: #bfd6f8;
+        --indigo-soft: #d1c2f6;
+        --purple-soft: #d4c2ef;
+        --pink-soft: #edc2d9;
+        --primary-soft: #bfd6f8;
+        --secondary-soft: #d4c2ef;
+        --success-soft: #bfe5dc;
+        --info-soft: #bfecf2;
+        --warning-soft: #f0e3c7;
+        --danger-soft: #eec7c7;
+        --black-soft: #fafafa;
       }
 
-      100% {
-        background-color: var(--primary-color);
-        height: 0;
-        opacity: 1;
+      .page-inner span.badge {
+        font-size: 0.75em;
+        line-height: 1em !important;
       }
-    }
 
-    .loading-animation {
-      position: relative;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      width: 100%;
-      animation-name: loadbar;
-      animation-duration: 5s;
-    }
+      .page-inner.h1,
+      .page-inner h1 {
+        font-size: 2em !important;
+        font-weight: bold;
+      }
 
-    /* loading animation end */
+      .page-inner.h2,
+      .page-inner h2 {
+        font-size: 1.6em !important;
+      }
 
-    .multiuse-pages-section-socialbar {
-      padding: 0;
-      position: relative;
-      width: 100%;
-      margin: 0;
-    }
+      .page-inner .h4,
+      .page-inner h4 {
+        font-size: 1.4em !important;
+        font-weight: bold;
+      }
 
-    .multiuse-pages-section-socialbar .socialbar .social-link-group a {
-      display: inline-block;
-      margin: 0px auto;
-      padding: 10px 40px;
-      text-align: center;
-    }
+      .page-inner p {
+        line-height: 2em !important;
+        font-size: 1em !important;
+      }
+    </style>
+    <!-- =============================================== --
+    -- [FINAL] CONFIG - LARGURA DA TELA -->
+    <div class="mds-bootstrap-5">
+      <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
+  -- =============================================== -->
+      <section class="multiuse-pages-section-socialbar">
+        <div class="socialbar">
+          <div class="loading-animation"></div>
+          <div class="social-link-group text-center">
+            <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
+                alt=""
+            /></a>
 
-    .multiuse-pages-section-socialbar .socialbar {
-      width: 100%;
-      background-color: var(--secondary-color);
-      border: 0px solid #222;
-      transition: all linear 200ms;
-      line-height: 1.15;
-    }
+            <a
+              href="https://www.instagram.com/igrejadeuseamoroficial"
+              target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
+                alt=""
+            /></a>
 
-    .multiuse-pages-section-socialbar .socialbar .social-link-group {
-      margin: 0;
-    }
+            <a
+              href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
+              target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
+                alt=""
+            /></a>
 
-    .multiuse-pages-section-socialbar .socialbar .social-link-group a {
-      display: inline-block;
-      margin: 0px auto;
-      padding: 10px 30px;
-      text-align: center;
-      color: var(--primary-color);
-      transition: all linear 200ms;
-    }
-
-    .multiuse-pages-section-socialbar .socialbar .social-link-group a:hover {
-      color: #ffffff;
-    }
-
-    .multiuse-pages-section-socialbar :hover.socialbar {
-      box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
-    }
-
-    .multiuse-pages-section-socialbar img {
-      height: 20px;
-      width: 20px;
-      display: flex;
-    }
-  </style>
-  <!-- =============================================== --
--- [FINAL] SECTION - MIDIAS SOCIAIS -->
-
-  <!-- [INÍCIO] SECTION - MANUAL DE BATISMO
-  ================================================== -->
-  <style>
-    .multiuse-pages-section-manual-batismo .underline {
-      width: 100px;
-      height: 5px;
-      margin: 10px auto 50px;
-      border-radius: 10px;
-      background-color: var(--primary-color);
-    }
-
-    .multiuse-pages-section-manual-batismo .btn {
-      font-size: 1em !important;
-      border-radius: 8px !important;
-      padding: 8px 16px !important;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-
-    .multiuse-pages-section-manual-batismo .btn:hover {
-      background-color: var(--primary);
-      color: var(--secondary);
-    }
-  </style>
-  <section class="multiuse-pages-section-manual-batismo">
-    <div class="container-fluid">
-      <div class="container">
-        <h1 class="font-weight-bold text-center h1">Manual do Batismo</h1>
-        <div class="underline"></div>
-        <!--Section description-->
-        <p class="text-center mb-5 mx-auto w-responsive lead">
-          Você que está se preparando para o batismo, este manual irá ensiná-lo
-          as doutrinas básicas da Palavra de Deus. Estude! O ideal é você
-          estudá-lo durante as aulas de batismo da IPDA de seu bairro. Procure
-          saber em quais dias e horários as aulas acontecem. Participe!
-        </p>
-        <p class="text-center mb-5 mx-auto w-responsive lead text-danger">
-          A distribuição do material é gratuita, sendo proibida a reprodução e
-          venda do mesmo, quem o fizer estará sujeito à punição descrita em lei.
-        </p>
-
-        <div class="row">
-          <!-- /.COLUNA 1 DE 3-->
-          <div class="col-lg-6 my-5">
-            <div
-              class="multiuse-pages-section-manual-batismo-img"
-              style="background-image: url(https://i.ibb.co/0DKrzBd/brazil.png)"
-            ></div>
-            <h3>Manual do Batismo</h3>
-            <p class="multiuse-pages-section-manual-batismo-p">
-              Faça o download do manual em português
-            </p>
-            <p>
-              <a
-                class="btn"
-                target="_blank"
-                href="https://s3-sa-east-1.amazonaws.com/inradar.media/uploads/download/None/download-23cf7e245401ad44cb48e65f044a7bc7.pdf"
-                role="button"
-                >Download</a
-              >
-            </p>
-          </div>
-
-          <div class="col-lg-6 my-5">
-            <div
-              class="multiuse-pages-section-manual-batismo-img"
-              style="background-image: url(https://i.ibb.co/8dKtrP7/spain.png)"
-            ></div>
-            <h3>Manual do Batismo</h3>
-            <p class="multiuse-pages-section-manual-batismo-p">
-              Descargar el manual en español
-            </p>
-            <p>
-              <a
-                class="btn"
-                target="_blank"
-                href="https://s3-sa-east-1.amazonaws.com/inradar.media/uploads/download/None/download-86fc9f5ba030653cc62edf5dec397513.pdf"
-                role="button"
-                >Download</a
-              >
-            </p>
+            <a href="https://twitter.com/deusamoroficial" target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
+                alt=""
+            /></a>
           </div>
         </div>
-        <!-- /.container -->
-      </div>
-    </div>
+      </section>
+      <style>
+        @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
 
-    <!-- /.container-fluid -->
-  </section>
-  <!-- /.multiuse-pages-section-manual-batismo -->
-  <style>
-    .multiuse-pages-section-manual-batismo {
-      background-color: #fafafa;
-      text-align: center;
-      padding: 80px 0;
-    }
+        /* loading animation begin */
+        @keyframes loadbar {
+          0% {
+            background-color: var(--primary-color);
+            width: 0;
+            height: 4px;
+            opacity: 0.3;
+          }
 
-    .multiuse-pages-section-manual-batismo p {
-      text-align: center;
-    }
+          97% {
+            background-color: var(--primary-color);
+            opacity: 1;
+            height: 4px;
+            width: 100%;
+          }
 
-    .multiuse-pages-section-manual-batismo-img {
-      width: 100px;
-      height: 100px;
-      margin: 10px auto 10px auto;
-      padding: 0;
-      border-radius: 500px;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
-  <!-- [FINAL] SECTION - MANUAL DE BATISMO
+          100% {
+            background-color: var(--primary-color);
+            height: 0;
+            opacity: 1;
+          }
+        }
+
+        .loading-animation {
+          position: relative;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          width: 100%;
+          animation-name: loadbar;
+          animation-duration: 5s;
+        }
+
+        /* loading animation end */
+
+        .multiuse-pages-section-socialbar {
+          padding: 0;
+          position: relative;
+          width: 100%;
+          margin: 0;
+        }
+
+        .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+          display: inline-block;
+          margin: 0px auto;
+          padding: 10px 40px;
+          text-align: center;
+        }
+
+        .multiuse-pages-section-socialbar .socialbar {
+          width: 100%;
+          background-color: var(--secondary-color);
+          border: 0px solid #222;
+          transition: all linear 200ms;
+          line-height: 1.15;
+        }
+
+        .multiuse-pages-section-socialbar .socialbar .social-link-group {
+          margin: 0;
+        }
+
+        .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+          display: inline-block;
+          margin: 0px auto;
+          padding: 10px 30px;
+          text-align: center;
+          color: var(--primary-color);
+          transition: all linear 200ms;
+        }
+
+        .multiuse-pages-section-socialbar
+          .socialbar
+          .social-link-group
+          a:hover {
+          color: #ffffff;
+        }
+
+        .multiuse-pages-section-socialbar :hover.socialbar {
+          box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
+        }
+
+        .multiuse-pages-section-socialbar img {
+          height: 20px;
+          width: 20px;
+          display: flex;
+        }
+      </style>
+      <!-- =============================================== --
+-- [FINAL] SECTION - MIDIAS SOCIAIS -->
+
+      <!-- [INÍCIO] SECTION - MANUAL DE BATISMO
+  ================================================== -->
+      <style>
+        .multiuse-pages-section-manual-batismo .underline {
+          width: 100px;
+          height: 5px;
+          margin: 10px auto 50px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+        }
+
+        .multiuse-pages-section-manual-batismo .btn {
+          font-size: 1em !important;
+          border-radius: 8px !important;
+          padding: 8px 16px !important;
+          border: 2px solid var(--primary);
+          color: var(--primary);
+        }
+
+        .multiuse-pages-section-manual-batismo .btn:hover {
+          background-color: var(--primary);
+          color: var(--secondary);
+        }
+      </style>
+      <section class="multiuse-pages-section-manual-batismo">
+        <div class="container-fluid">
+          <div class="container">
+            <h1 class="font-weight-bold text-center h1">Manual do Batismo</h1>
+            <div class="underline"></div>
+            <!--Section description-->
+            <p class="text-center mb-5 mx-auto w-responsive lead">
+              Você que está se preparando para o batismo, este manual irá
+              ensiná-lo as doutrinas básicas da Palavra de Deus. Estude! O ideal
+              é você estudá-lo durante as aulas de batismo da IPDA de seu
+              bairro. Procure saber em quais dias e horários as aulas acontecem.
+              Participe!
+            </p>
+            <p class="text-center mb-5 mx-auto w-responsive lead text-danger">
+              A distribuição do material é gratuita, sendo proibida a reprodução
+              e venda do mesmo, quem o fizer estará sujeito à punição descrita
+              em lei.
+            </p>
+
+            <div class="row">
+              <!-- /.COLUNA 1 DE 3-->
+              <div class="col-lg-6 my-5">
+                <div
+                  class="multiuse-pages-section-manual-batismo-img"
+                  style="
+                    background-image: url(https://i.ibb.co/0DKrzBd/brazil.png);
+                  "
+                ></div>
+                <h3>Manual do Batismo</h3>
+                <p class="multiuse-pages-section-manual-batismo-p">
+                  Faça o download do manual em português
+                </p>
+                <p>
+                  <a
+                    class="btn"
+                    target="_blank"
+                    href="https://s3-sa-east-1.amazonaws.com/inradar.media/uploads/download/None/download-23cf7e245401ad44cb48e65f044a7bc7.pdf"
+                    role="button"
+                    >Download</a
+                  >
+                </p>
+              </div>
+
+              <div class="col-lg-6 my-5">
+                <div
+                  class="multiuse-pages-section-manual-batismo-img"
+                  style="
+                    background-image: url(https://i.ibb.co/8dKtrP7/spain.png);
+                  "
+                ></div>
+                <h3>Manual do Batismo</h3>
+                <p class="multiuse-pages-section-manual-batismo-p">
+                  Descargar el manual en español
+                </p>
+                <p>
+                  <a
+                    class="btn"
+                    target="_blank"
+                    href="https://s3-sa-east-1.amazonaws.com/inradar.media/uploads/download/None/download-86fc9f5ba030653cc62edf5dec397513.pdf"
+                    role="button"
+                    >Download</a
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- /.container -->
+          </div>
+        </div>
+
+        <!-- /.container-fluid -->
+      </section>
+      <!-- /.multiuse-pages-section-manual-batismo -->
+      <style>
+        .multiuse-pages-section-manual-batismo {
+          background-color: #fafafa;
+          text-align: center;
+          padding: 80px 0;
+        }
+
+        .multiuse-pages-section-manual-batismo p {
+          text-align: center;
+        }
+
+        .multiuse-pages-section-manual-batismo-img {
+          width: 100px;
+          height: 100px;
+          margin: 10px auto 10px auto;
+          padding: 0;
+          border-radius: 500px;
+          background-position: center;
+          background-size: cover;
+        }
+      </style>
+      <!-- [FINAL] SECTION - MANUAL DE BATISMO
     ================================================== -->
-</div>
+    </div>
+  </body>
+</html>

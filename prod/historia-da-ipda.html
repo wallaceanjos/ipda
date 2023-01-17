@@ -1,1010 +1,1085 @@
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css" rel="stylesheet" crossorigin="anonymous">
-
-<!-- [INÍCIO] CONFIG - LARGURA DA TELA
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>InChurch</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no"
+    />
+    <link
+      href="https://s3-sa-east-1.amazonaws.com/inradar.media/font-face/font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/matcha-ds@1.0.5/assets/utilities/mds-bs.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        position: relative;
+        padding: 0;
+        margin: 0;
+      }
+      div.container {
+        width: 100%;
+        margin: 0 auto;
+        position: relative !important;
+        top: 0;
+        left: 0;
+        min-height: auto;
+        width: 100%;
+        max-width: 100% !important;
+        font-family: 'Circular Std' !important;
+        font-size: 17px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      pre,
+      img,
+      ul,
+      ol,
+      blockquote {
+      }
+      pre {
+        display: inline-block;
+        width: 100%;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word;
+      }
+      ​ pre span {
+      }
+      ​ img {
+        max-width: 100% !important;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- [INÍCIO] CONFIG - LARGURA DA TELA
   -- =============================================== -->
-  <style>
-    .page.container.row {
-      margin: 0 auto;
-      padding: 0;
-      width: 100%;
-      max-width: 1920px;
-    }
-    .page.container.row .page-inner{
-      margin: 0;
-    }
-    :root {
-      --primary-color: #3d3e85;
-      --primary: #3d3e85;
-      --secondary-color: #f4f4f4;
-      --secondary: #f4f4f4;
-      --blue: #0061f2;
-      --indigo: #5800e8;
-      --purple: #6900c7;
-      --pink: #e30059;
-      --red: #e81500;
-      --orange: #f76400;
-      --yellow: #f4a100;
-      --green: #00ac69;
-      --teal: #00ba94;
-      --cyan: #00cfd5;
-      --white: #fff;
-      --gray: #687281;
-      --gray-dark: #323f52;
-      --success: #00ac69;
-      --info: #00cfd5;
-      --warning: #f4a100;
-      --danger: #e81500;
-      --light: #eff3f9;
-      --dark: #171717;
-      --black: #000;
-      --white: #fff;
-      --red: #e81500;
-      --orange: #f76400;
-      --yellow: #f4a100;
-      --green: #00ac69;
-      --teal: #00ba94;
-      --cyan: #00cfd5;
-      --blue: #0061f2;
-      --indigo: #5800e8;
-      --purple: #6900c7;
-      --pink: #e30059;
-      --red-soft: #eec7c7;
-      --orange-soft: #f1d6c7;
-      --yellow-soft: #f0e3c7;
-      --green-soft: #bfe5dc;
-      --teal-soft: #bfe8e5;
-      --cyan-soft: #bfecf2;
-      --blue-soft: #bfd6f8;
-      --indigo-soft: #d1c2f6;
-      --purple-soft: #d4c2ef;
-      --pink-soft: #edc2d9;
-      --primary-soft: #bfd6f8;
-      --secondary-soft: #d4c2ef;
-      --success-soft: #bfe5dc;
-      --info-soft: #bfecf2;
-      --warning-soft: #f0e3c7;
-      --danger-soft: #eec7c7;
-      --black-soft: #fafafa;
-      
-      --bs-success-rgb: 0, 172, 105;
-      --bs-primary-rgb: 61, 62, 133;
-      --bs-light-rgb: 248, 249, 250;
-    }
-  
-    .page-inner span.badge {
-      font-size: 0.75em;
-      line-height: 1em !important;
-    }
-  
-    .page-inner.h1,
-    .page-inner h1 {
-      font-size: 2em !important;
-      font-weight: bold;
-    }
-  
-    .page-inner.h2,
-    .page-inner h2 {
-      font-size: 1.6em !important;
-    }
-  
-    .page-inner .h4,
-    .page-inner h4 {
-      font-size: 1.4em !important;
-      font-weight: bold;
-    }
-  
-    .page-inner p {
-      line-height: 2em !important;
-      font-size: 1em !important;
-    }
-  </style>
-<!-- =============================================== --
+    <style>
+      .page.container.row {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        max-width: 1920px;
+      }
+      .page.container.row .page-inner {
+        margin: 0;
+      }
+      :root {
+        --primary-color: #3d3e85;
+        --primary: #3d3e85;
+        --secondary-color: #f4f4f4;
+        --secondary: #f4f4f4;
+        --blue: #0061f2;
+        --indigo: #5800e8;
+        --purple: #6900c7;
+        --pink: #e30059;
+        --red: #e81500;
+        --orange: #f76400;
+        --yellow: #f4a100;
+        --green: #00ac69;
+        --teal: #00ba94;
+        --cyan: #00cfd5;
+        --white: #fff;
+        --gray: #687281;
+        --gray-dark: #323f52;
+        --success: #00ac69;
+        --info: #00cfd5;
+        --warning: #f4a100;
+        --danger: #e81500;
+        --light: #eff3f9;
+        --dark: #171717;
+        --black: #000;
+        --white: #fff;
+        --red: #e81500;
+        --orange: #f76400;
+        --yellow: #f4a100;
+        --green: #00ac69;
+        --teal: #00ba94;
+        --cyan: #00cfd5;
+        --blue: #0061f2;
+        --indigo: #5800e8;
+        --purple: #6900c7;
+        --pink: #e30059;
+        --red-soft: #eec7c7;
+        --orange-soft: #f1d6c7;
+        --yellow-soft: #f0e3c7;
+        --green-soft: #bfe5dc;
+        --teal-soft: #bfe8e5;
+        --cyan-soft: #bfecf2;
+        --blue-soft: #bfd6f8;
+        --indigo-soft: #d1c2f6;
+        --purple-soft: #d4c2ef;
+        --pink-soft: #edc2d9;
+        --primary-soft: #bfd6f8;
+        --secondary-soft: #d4c2ef;
+        --success-soft: #bfe5dc;
+        --info-soft: #bfecf2;
+        --warning-soft: #f0e3c7;
+        --danger-soft: #eec7c7;
+        --black-soft: #fafafa;
+
+        --bs-success-rgb: 0, 172, 105;
+        --bs-primary-rgb: 61, 62, 133;
+        --bs-light-rgb: 248, 249, 250;
+      }
+
+      .page-inner span.badge {
+        font-size: 0.75em;
+        line-height: 1em !important;
+      }
+
+      .page-inner.h1,
+      .page-inner h1 {
+        font-size: 2em !important;
+        font-weight: bold;
+      }
+
+      .page-inner.h2,
+      .page-inner h2 {
+        font-size: 1.6em !important;
+      }
+
+      .page-inner .h4,
+      .page-inner h4 {
+        font-size: 1.4em !important;
+        font-weight: bold;
+      }
+
+      .page-inner p {
+        line-height: 2em !important;
+        font-size: 1em !important;
+      }
+    </style>
+    <!-- =============================================== --
     -- [FINAL] CONFIG - LARGURA DA TELA -->
-<div class="mds-bootstrap-5">
-<!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
+    <div class="mds-bootstrap-5">
+      <!-- [INÍCIO] SECTION - MIDIAS SOCIAIS
   -- =============================================== -->
-<section class="multiuse-pages-section-socialbar">
-  <div class="socialbar">
-    <div class="social-link-group text-center">
-      <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
-        ><img
-          src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
-          alt=""
-      /></a>
+      <section class="multiuse-pages-section-socialbar">
+        <div class="socialbar">
+          <div class="social-link-group text-center">
+            <a href="https://www.facebook.com/igrejadeuseamor" target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/facebook.svg"
+                alt=""
+            /></a>
 
-      <a href="https://www.instagram.com/igrejadeuseamoroficial" target="blank"
-        ><img
-          src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
-          alt=""
-      /></a>
+            <a
+              href="https://www.instagram.com/igrejadeuseamoroficial"
+              target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/instagram.svg"
+                alt=""
+            /></a>
 
-      <a
-        href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
-        target="blank"
-        ><img
-          src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
-          alt=""
-      /></a>
+            <a
+              href="https://soundcloud.com/deuseamoroficial/sets/igreja-pentecostal-deus-e-amor"
+              target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/soundcloud.svg"
+                alt=""
+            /></a>
 
-      <a href="https://twitter.com/deusamoroficial" target="blank"
-        ><img
-          src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
-          alt=""
-      /></a>
-    </div>
-  </div>
-</section>
-<style>
-  @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+            <a href="https://twitter.com/deusamoroficial" target="blank"
+              ><img
+                src="https://ipda.com.br/assets/deuseamor/images/twitter.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+      <style>
+        @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
 
-  .multiuse-pages-section-socialbar {
-    padding: 0;
-    position: relative;
-    width: 100%;
-    margin: 0;
-  }
+        .multiuse-pages-section-socialbar {
+          padding: 0;
+          position: relative;
+          width: 100%;
+          margin: 0;
+        }
 
-  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
-    display: inline-block;
-    margin: 0px auto;
-    padding: 10px 40px;
-    text-align: center;
-  }
+        .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+          display: inline-block;
+          margin: 0px auto;
+          padding: 10px 40px;
+          text-align: center;
+        }
 
-  .multiuse-pages-section-socialbar .socialbar {
-    width: 100%;
-    background-color: var(--secondary-color);
-    border: 0px solid #222;
-    transition: all linear 200ms;
-    line-height: 1.15;
-  }
+        .multiuse-pages-section-socialbar .socialbar {
+          width: 100%;
+          background-color: var(--secondary-color);
+          border: 0px solid #222;
+          transition: all linear 200ms;
+          line-height: 1.15;
+        }
 
-  .multiuse-pages-section-socialbar .socialbar .social-link-group {
-    margin: 0;
-  }
+        .multiuse-pages-section-socialbar .socialbar .social-link-group {
+          margin: 0;
+        }
 
-  .multiuse-pages-section-socialbar .socialbar .social-link-group a {
-    display: inline-block;
-    margin: 0px auto;
-    padding: 10px 30px;
-    text-align: center;
-    color: var(--primary-color);
-    transition: all linear 200ms;
-  }
+        .multiuse-pages-section-socialbar .socialbar .social-link-group a {
+          display: inline-block;
+          margin: 0px auto;
+          padding: 10px 30px;
+          text-align: center;
+          color: var(--primary-color);
+          transition: all linear 200ms;
+        }
 
-  .multiuse-pages-section-socialbar .socialbar .social-link-group a:hover {
-    color: #ffffff;
-  }
+        .multiuse-pages-section-socialbar
+          .socialbar
+          .social-link-group
+          a:hover {
+          color: #ffffff;
+        }
 
-  .multiuse-pages-section-socialbar :hover.socialbar {
-    box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
-  }
+        .multiuse-pages-section-socialbar :hover.socialbar {
+          box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.35);
+        }
 
-  .multiuse-pages-section-socialbar img {
-    height: 20px;
-    width: 20px;
-    display: flex;
-  }
-</style>
-<!-- =============================================== --
+        .multiuse-pages-section-socialbar img {
+          height: 20px;
+          width: 20px;
+          display: flex;
+        }
+      </style>
+      <!-- =============================================== --
 -- [FINAL] SECTION - MIDIAS SOCIAIS -->
 
-  <!-- [INÍCIO] SECTION - STORY BIOGRAFIA
+      <!-- [INÍCIO] SECTION - STORY BIOGRAFIA
   ================================================== -->
-  <style>
-    .multiuse-pages-section-story-bio {
-      background-color: var(--secondary-color);
-      text-align: center;
-      padding: 80px 0 20px 0;
-      color: var(--dark);
-      line-height: 2em !important;
-      position: relative;
-      height: 100%;
-      display: block;
-    }
-    .multiuse-pages-section-story-bio h2 {
-    }
-    .multiuse-pages-section-story-bio .underline {
-      width: 100px;
-      height: 5px;
-      margin: 10px auto 50px;
-      border-radius: 10px;
-      background-color: var(--primary-color);
-    }
-    .multiuse-pages-section-bio {
-      background: var(--secondary-color);
-      padding: 0 0 80px 0;
-    }
-    .multiuse-pages-section-bio .bio-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0px 4px 12px 0px #3d3e851c;
-    }
-    .multiuse-pages-section-bio .embed-card:before {
-      content: 'Video Institucional IPDA';
-      transform: translate(30px, -54px);
-      position: absolute;
-      background: var(--white);
-      color: var(--dark);
-      padding: 4px 18px;
-      border-radius: 50px;
-      text-transform: capitalize;
-      font-weight: bold;
-      font-size: 1em;
-    }
-    .multiuse-pages-section-bio .btn {
-      font-size: 1em !important;
-    }
-    .multiuse-pages-section-bio .embed-card {
-      background: var(--primary-color);
-      border-radius: 0 8px 8px 0;
-      height: 100%;
-      margin-top: 80px;
-    }
-    .multiuse-pages-section-bio .underline {
-      width: 100px;
-      height: 5px;
-      margin: 10px auto 50px;
-      border-radius: 10px;
-      background-color: var(--primary-color);
-    }
-    .multiuse-pages-section-bio .avatar span {
-      height: 200px;
-      width: 200px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      display: block;
-      margin: 0 auto;
-      border-radius: 200px;
-    }
-    .multiuse-pages-section-bio .avatar span {
-      height: 200px;
-      width: 200px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      display: block;
-      margin: 0 auto;
-      border-radius: 200px;
-    }
-    .multiuse-pages-section-bio h1,
-    .multiuse-pages-section-bio p {
-      color: var(--dark);
-    }
-    .multiuse-pages-section-bio p {
-      line-height: 2em !important;
-      font-size: 0.96em !important;
-    }
-    .multiuse-pages-section-bio a {
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 10px;
-    }
-    .multiuse-pages-section-bio-img {
-      width: 160px;
-      height: 160px;
-      margin: 10px auto 10px auto;
-      padding: 0;
-      border-radius: 500px;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
-  <section class="multiuse-pages-section-story-bio">
-    <div class="container-fluid">
-      <div class="container">
-
-      
-      <h2 class="font-weight-bold text-center h2">História da IPDA</h2>
-      <div class="underline"></div>
-      <p class="mb-3 mx-auto lead">
-        A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho de 1962 e
-        começou com apenas três membros: Missionário David Martins Miranda, sua
-        mãe Anália Miranda e sua irmã Araci Miranda, conforme a orientação do
-        Senhor.
-      </p>
-      <p class="mb-5 mx-auto lead">
-        A Igreja Pentecostal Deus é Amor cresceu e cresce sobremaneira, por isso
-        alcançou igrejas/almas em quatro continentes da terra, que são: América,
-        Europa, África e Ásia.
-      </p>
-    </div>
-  </div>
-  </section>
-  <section class="multiuse-pages-section-bio">
-    <div class="container-fluid">
-      <div class="container">
-      <div class="row g-0 align-items-top">
-        <div class="col-lg-6 bio-card mb-5 mb-lg-0">
-          <div class="p-5 text-center">
-            <div
-              class="card-up peach-gradient"
-              style="border-radius: 5px 0 0 0"
-            ></div>
-            <div class="avatar mx-auto white my-4">
-              <span
-                style="
-                  background-image: url('https://i.ibb.co/BK8ykMQ/Missionario-David-Miranda.jpg');
-                "
-              ></span>
-            </div>
-            <div class="card-body">
-              <h1 class="font-weight-bold text-center h1">
-                Missionário David Miranda
-              </h1>
-              <div class="underline"></div>
-              <p class="text-center mb-5 mx-auto lead"></p>
-              <blockquote class="blockquote text-center">
-                <p class="mb-0">
-                  "Combati o bom combate, acabei a carreira, guardei a fé"<br />(2
-                  Timóteo 4.7)
-                </p>
-                <footer class="blockquote-footer">
-                  <h6>David Miranda</h6>
-                  <cite title="Source Title">1936-2015</cite>
-                </footer>
-              </blockquote>
-              <p></p>
-              <p class="text-center mx-auto">
-                Em seu testemunho de fé, Missionário conta que seus pais não
-                conheciam a Bíblia, mas por desígnio havia acabado de dar à luz,
-                era escolhido desde o ventre para ser um dos maiores
-                missionários que o Brasil já teve: “Um servo fiel do Senhor
-                Jesus, que pregou a cura divina e a libertação das almas”. Com a
-                sua chegada, a família passou a ser composta por seis pessoas.
-                Mais tarde, nasceu Araci Miranda, a caçula da família Miranda.
-              </p>
+      <style>
+        .multiuse-pages-section-story-bio {
+          background-color: var(--secondary-color);
+          text-align: center;
+          padding: 80px 0 20px 0;
+          color: var(--dark);
+          line-height: 2em !important;
+          position: relative;
+          height: 100%;
+          display: block;
+        }
+        .multiuse-pages-section-story-bio h2 {
+        }
+        .multiuse-pages-section-story-bio .underline {
+          width: 100px;
+          height: 5px;
+          margin: 10px auto 50px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+        }
+        .multiuse-pages-section-bio {
+          background: var(--secondary-color);
+          padding: 0 0 80px 0;
+        }
+        .multiuse-pages-section-bio .bio-card {
+          background: var(--white);
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 4px 12px 0px #3d3e851c;
+        }
+        .multiuse-pages-section-bio .embed-card:before {
+          content: 'Video Institucional IPDA';
+          transform: translate(30px, -54px);
+          position: absolute;
+          background: var(--white);
+          color: var(--dark);
+          padding: 4px 18px;
+          border-radius: 50px;
+          text-transform: capitalize;
+          font-weight: bold;
+          font-size: 1em;
+        }
+        .multiuse-pages-section-bio .btn {
+          font-size: 1em !important;
+        }
+        .multiuse-pages-section-bio .embed-card {
+          background: var(--primary-color);
+          border-radius: 0 8px 8px 0;
+          height: 100%;
+          margin-top: 80px;
+        }
+        .multiuse-pages-section-bio .underline {
+          width: 100px;
+          height: 5px;
+          margin: 10px auto 50px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+        }
+        .multiuse-pages-section-bio .avatar span {
+          height: 200px;
+          width: 200px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          display: block;
+          margin: 0 auto;
+          border-radius: 200px;
+        }
+        .multiuse-pages-section-bio .avatar span {
+          height: 200px;
+          width: 200px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          display: block;
+          margin: 0 auto;
+          border-radius: 200px;
+        }
+        .multiuse-pages-section-bio h1,
+        .multiuse-pages-section-bio p {
+          color: var(--dark);
+        }
+        .multiuse-pages-section-bio p {
+          line-height: 2em !important;
+          font-size: 0.96em !important;
+        }
+        .multiuse-pages-section-bio a {
+          text-decoration: none;
+          display: inline-block;
+          padding: 0 10px;
+        }
+        .multiuse-pages-section-bio-img {
+          width: 160px;
+          height: 160px;
+          margin: 10px auto 10px auto;
+          padding: 0;
+          border-radius: 500px;
+          background-position: center;
+          background-size: cover;
+        }
+      </style>
+      <section class="multiuse-pages-section-story-bio">
+        <div class="container-fluid">
+          <div class="container">
+            <h2 class="font-weight-bold text-center h2">História da IPDA</h2>
+            <div class="underline"></div>
+            <p class="mb-3 mx-auto lead">
+              A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho de
+              1962 e começou com apenas três membros: Missionário David Martins
+              Miranda, sua mãe Anália Miranda e sua irmã Araci Miranda, conforme
+              a orientação do Senhor.
+            </p>
+            <p class="mb-5 mx-auto lead">
+              A Igreja Pentecostal Deus é Amor cresceu e cresce sobremaneira,
+              por isso alcançou igrejas/almas em quatro continentes da terra,
+              que são: América, Europa, África e Ásia.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="multiuse-pages-section-bio">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row g-0 align-items-top">
+              <div class="col-lg-6 bio-card mb-5 mb-lg-0">
+                <div class="p-5 text-center">
+                  <div
+                    class="card-up peach-gradient"
+                    style="border-radius: 5px 0 0 0"
+                  ></div>
+                  <div class="avatar mx-auto white my-4">
+                    <span
+                      style="
+                        background-image: url('https://i.ibb.co/BK8ykMQ/Missionario-David-Miranda.jpg');
+                      "
+                    ></span>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="font-weight-bold text-center h1">
+                      Missionário David Miranda
+                    </h1>
+                    <div class="underline"></div>
+                    <p class="text-center mb-5 mx-auto lead"></p>
+                    <blockquote class="blockquote text-center">
+                      <p class="mb-0">
+                        "Combati o bom combate, acabei a carreira, guardei a
+                        fé"<br />(2 Timóteo 4.7)
+                      </p>
+                      <footer class="blockquote-footer">
+                        <h6>David Miranda</h6>
+                        <cite title="Source Title">1936-2015</cite>
+                      </footer>
+                    </blockquote>
+                    <p></p>
+                    <p class="text-center mx-auto">
+                      Em seu testemunho de fé, Missionário conta que seus pais
+                      não conheciam a Bíblia, mas por desígnio havia acabado de
+                      dar à luz, era escolhido desde o ventre para ser um dos
+                      maiores missionários que o Brasil já teve: “Um servo fiel
+                      do Senhor Jesus, que pregou a cura divina e a libertação
+                      das almas”. Com a sua chegada, a família passou a ser
+                      composta por seis pessoas. Mais tarde, nasceu Araci
+                      Miranda, a caçula da família Miranda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 embed-card">
+                <div class="p-3">
+                  <div class="card-body ratio ratio-16x9">
+                    <iframe
+                      src="https://www.youtube.com/embed/KzBdvwHZOIo"
+                      allowfullscreen=""
+                    ></iframe>
+                  </div>
+                  <div class="p-4 text-center">
+                    <a
+                      class="py-2 px-4 btn btn-light"
+                      style="font-size: 1em"
+                      href="http://www.youtube.com/channel/UC5KOZrbbdsPizjoLIG--zkg?sub_confirmation=1"
+                      >Inscreva-se nocanal</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 embed-card">
-          <div class="p-3">
-            <div class="card-body ratio ratio-16x9">
+      </section>
+      <!-- [FINAL] SECTION - STORY BIOGRAFIA
+  ================================================== -->
+
+      <!-- [INÍCIO] SECTION - CARD
+  ================================================== -->
+      <section class="multiuse-pages-section-card">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card bio-card">
+                  <div
+                    class="multiuse-pages-section-card-img"
+                    style="
+                      background-image: url(https://i.ibb.co/WDFGTm3/Concentracao-miss-060806-064.jpg);
+                    "
+                  ></div>
+                  <div class="card-body">
+                    <h3>Reunião de Fé com o Miss. David Miranda</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bio-card">
+                  <div
+                    class="multiuse-pages-section-card-img"
+                    style="
+                      background-image: url(https://i.ibb.co/SVm2P5W/miss-David-Miranda.jpg);
+                    "
+                  ></div>
+                  <div class="card-body">
+                    <h3>Missionário David Miranda nos anos 60</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bio-card">
+                  <div
+                    class="multiuse-pages-section-card-img"
+                    style="
+                      background-image: url(https://i.ibb.co/4jQvJjj/primeiraigreja.jpg);
+                    "
+                  ></div>
+                  <div class="card-body">
+                    <h3>IPDA foi fundada dia 03 de Junho de 1962</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .multiuse-pages-section-card {
+          background-color: var(--secondary-color);
+          text-align: center;
+          padding: 20px 0 80px;
+        }
+        .multiuse-pages-section-card p {
+          text-align: center;
+        }
+        .multiuse-pages-section-card .card {
+          border-radius: 10px 10px 0 0;
+          border: none;
+        }
+        .multiuse-pages-section-card .bio-card {
+          background: var(--white);
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 4px 12px 0px #3d3e851c;
+          padding: 0;
+          margin: 20px 0 !important;
+        }
+        .multiuse-pages-section-card-img {
+          width: 100%;
+          height: 240px;
+          margin: 0 auto;
+          padding: 0;
+          border-radius: 10px 10px 0 0;
+          background-position: center;
+          background-size: cover;
+        }
+      </style>
+      <!-- [FINAL] SECTION - CARD
+  ================================================== -->
+
+      <!-- [INÍCIO] SECTION - STORY
+  ================================================== -->
+      <section class="multiuse-pages-section-story">
+        <div class="container-fluid">
+          <div class="container">
+            <h1 class="font-weight-bold text-center h1">
+              Um atentado durante um culto em 1992
+            </h1>
+            <div class="underline"></div>
+            <p class="mb-3 mx-auto lead">
+              Em 1992, o saudoso Miss. David Miranda foi vítima de um atentado
+              durante um culto no antigo templo, onde um rapaz, que já havia
+              assassinado o pastor Ruy Freitas, da IPDA de Caxias do Sul/RS,
+              veio para São Paulo com a mesma intenção de matá-lo.
+            </p>
+            <p class="mb-5 mx-auto lead">
+              Durante o culto, o missionário chamou as pessoas à frente do
+              púlpito para aceitarem a Jesus, momento em que esse rapaz veio
+              entre elas e atirou no rosto do missionário, cuja bala raspou na
+              sua face esquerda e deixou incrustado o estilhaço. Sangrou muito,
+              mas Deus o livrou da morte pelo Seu grande poder. Em seguida,
+              atirou novamente, porém o missionário havia se abaixado e a bala
+              acertou a parede de trás. Esse acontecimento verídico mostra-nos
+              os grandes propósitos que Jesus tinha com o Seu servo, o que, de
+              fato, são resultados da gigante obra evangelística que cresce dia
+              a dia.
+            </p>
+          </div>
+        </div>
+      </section>
+      <style>
+        .multiuse-pages-section-story {
+          background-color: var(--dark);
+          padding: 80px 0;
+          color: var(--white);
+        }
+        .multiuse-pages-section-story .underline {
+          width: 100px;
+          height: 5px;
+          margin: 10px auto 50px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+        }
+      </style>
+      <!-- [FINAL] SECTION - STORY
+  ================================================== -->
+
+      <!-- [INÍCIO] SECTION - BANNER DIVIDER
+  ==================================================-->
+      <section class="multiuse-pages-section-banner-divider"></section>
+      <style>
+        .multiuse-pages-section-banner-divider {
+          height: 350px;
+          background-image: url(https://i.ibb.co/Ph81jGv/David-Miranda.jpg);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      </style>
+      <!-- [FINAL] SECTION - BANNER DIVIDER
+  ==================================================-->
+
+      <!-- [INÍCIO] SECTION - DESTAQUES
+  ==================================================-->
+      <section class="multiuse-pages-section-destaque">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="p-3 bio-card">
+                  <div
+                    class="multiuse-pages-section-destaque-img"
+                    style="
+                      background-image: url(https://i.ibb.co/xJL44dm/Concentracao-miss-060806-082.jpg);
+                    "
+                  ></div>
+                  <div class="text-start m-4">
+                    <h2>Uma vida marcada de Milagres</h2>
+                    <p class="multiuse-pages-section-destaque-p">
+                      David Miranda que realizou várias concentrações do Brasil
+                      e no mundo, onde muitos milagres de curas e livramentos
+                      aconteceram.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="p-3 bio-card">
+                  <div
+                    class="multiuse-pages-section-destaque-img"
+                    style="
+                      background-image: url(https://i.ibb.co/s1VrjNx/j-PIn9l-INll-ZFcuer.jpg);
+                    "
+                  ></div>
+                  <div class="text-start m-4">
+                    <h2>Missionário pregando através da Rádio</h2>
+                    <p class="multiuse-pages-section-destaque-p">
+                      Em 1961 deu-se início à programação de rádio, e após uma
+                      revelação de Deus, David Miranda decide seguir um
+                      ministério próprio. No ano seguinte, fundam a Igreja
+                      Pentecostal Deus é Amor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="p-3 bio-card">
+                  <div
+                    class="multiuse-pages-section-destaque-img"
+                    style="
+                      background-image: url(https://i.ibb.co/0CSJ1Hb/casamento.jpg);
+                    "
+                  ></div>
+                  <div class="text-start m-4">
+                    <h2>Missionário e sua esposa Ereni Miranda</h2>
+                    <p class="multiuse-pages-section-destaque-p">
+                      Em uma vigília ele conheceu a jovem Ereni. No dia 12 de
+                      junho de 1965 casou-se com ela e tiveram quatro filhos:
+                      David, Débora, Léia e Daniel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .multiuse-pages-section-destaque {
+          background-color: #fafafa;
+          text-align: center;
+          padding: 80px 0;
+        }
+        .multiuse-pages-section-destaque p {
+          margin: 0;
+        }
+        .multiuse-pages-section-destaque-img {
+          width: 100%;
+          height: 240px;
+          margin: 0px auto;
+          padding: 0;
+          border-radius: 10px;
+          background-position: center;
+          background-size: cover;
+        }
+        .multiuse-pages-section-destaque .bio-card {
+          background: var(--white);
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 4px 12px 0px #3d3e851c;
+          padding: 0;
+          margin: 20px 0 !important;
+        }
+      </style>
+      <!-- [FINAL] SECTION - DESTAQUES
+  ==================================================-->
+
+      <!-- [INÍCIO] SECTION - DETALHES
+  ==================================================-->
+      <section class="multiuse-pages-section-details">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row py-5">
+              <div class="col-md-7">
+                <h1 class="font-weight-bold h1 mt-5">
+                  Igreja Pentecostal Deus é Amor
+                </h1>
+                <p class="lead">
+                  A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho
+                  de 1962, pelo Missionário David Martins Miranda; visto que a
+                  data e a denominação foram reveladas ao fundador, por
+                  intermédio do Espírito Santo. O ministério iniciou com apenas
+                  três membros: Missionário David Martins Miranda, sua mãe
+                  Anália Miranda e sua irmã Araci Miranda. Sabe-se que
+                  muitíssimas almas são salvas pelo Senhor, através desta grande
+                  obra, em cumprimento das promessas dele ao seu servo.
+                </p>
+                <p class="lead">
+                  Com confiança e obediência Àquele que o chamou, Jesus Cristo,
+                  o saudoso Missionário David Miranda se empenhou dia a dia nos
+                  cultos, evangelizações, vigílias, consagrações, etc.;
+                  resultando em inúmeras IPDAs, presentes nos continentes:
+                  Américas, Europa, África e Ásia. Com isso, hoje, já está com
+                  mais de 17 mil igrejas espalhadas pelo Brasil e em 88 países
+                  em todo o mundo.
+                </p>
+                <p class="lead">
+                  O fundador partiu para o Senhor em 21/02/2015, sua esposa,
+                  Irmã Ereni de Oliveira Miranda, é atual presidente do
+                  ministério. Ela está dando continuidade ao crescimento
+                  espiritual, para que mais pessoas recebam a coroa da Vida
+                  Eterna, e isso é o que mais faz crescer a IPDA: evangelizar,
+                  amar, resgatar, zelar e cuidar das almas, a fim de que se
+                  tornem filhas de Deus.
+                </p>
+                <p class="lead">
+                  “Contudo, aos que o receberam, aos que creram em Seu Nome,
+                  deu-lhes o direito de se tornarem filhos de Deus” (João 1:12).
+                </p>
+              </div>
+              <div class="col-md-5">
+                <img
+                  src="https://i.ibb.co/1nqHVnY/Foto-Templo.jpg"
+                  class="
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    my-5
+                    bio-card
+                  "
+                />
+                <img
+                  src="https://i.ibb.co/9h01K3H/igreja.jpg"
+                  class="
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    my-5
+                    bio-card
+                  "
+                />
+              </div>
+            </div>
+            <hr class="m-0" />
+            <div class="row py-5">
+              <div class="col-md-7 order-md-2">
+                <h1 class="font-weight-bold h1 mt-5">
+                  Templo da Glória de Deus
+                </h1>
+                <p class="lead">
+                  O Templo da Glória de Deus foi inaugurado dia 01 de janeiro de
+                  2004, situado na Avenida do Estado, 4568, na cidade e
+                  município de São Paulo. Caravanas de estados do Brasil e de
+                  outros países marcaram presença nesta data célebre.
+                </p>
+                <p class="lead">
+                  O Templo tem a dimensão de 65.000m², quase 50 metros de
+                  altura; tem a capacidade para 60 mil pessoas, um
+                  estacionamento para 500 automóveis e 143 ônibus; 400
+                  sanitários, 12 mil metros de escadas, 3 enormes elevadores;
+                  toda a área tem ar-condicionado, 200 vitrais coloniais, com
+                  vidros coloridos; 2 belíssimos pórticos; e as cadeiras da
+                  igreja possuem 07 cores, simbolizando as 07 cores do
+                  arco-íris.
+                </p>
+                <p class="lead">
+                  Decerto, é uma obra gigantesca, marcada na história do
+                  evangelho, que tende a crescer mais e mais, porque seu foco é
+                  propagar a Palavra de Deus; fazendo com que se expanda
+                  notoriamente e ilumine os passos de todos aqueles que a
+                  aceitam.
+                </p>
+                <p class="lead"></p>
+                <blockquote class="blockquote text-center">
+                  <p class="mb-0">
+                    “A Tua Palavra é lâmpada que ilumina os meus passos e luz
+                    que clareia o meu caminho”
+                  </p>
+                  <footer class="blockquote-footer">
+                    <h6><cite title="Source Title">(Salmos 119:105)</cite></h6>
+                  </footer>
+                </blockquote>
+                <p></p>
+              </div>
+              <div class="col-md-5 order-md-1">
+                <img
+                  src="https://i.ibb.co/s9qwNXZ/i-ibb-co-6mkc6-CK-ipda-antiga-jpg.png"
+                  class="
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    my-5
+                    bio-card
+                  "
+                />
+                <img
+                  src="https://i.ibb.co/MCy6kht/vuy2-Yq-T0-ULoq-L8c-M.jpg"
+                  class="
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    my-5
+                    bio-card
+                  "
+                />
+              </div>
+            </div>
+            <hr class="m-0" />
+            <div class="row py-5">
+              <div class="col-md-7">
+                <h1 class="font-weight-bold h1 mt-5">Trajetória da IPDA</h1>
+                <p class="lead">
+                  A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho
+                  de 1962 e começou com apenas três membros: Missionário David
+                  Martins Miranda, sua mãe Anália Miranda e sua irmã Araci
+                  Miranda, conforme a orientação do Senhor. Ela cresceu e cresce
+                  sobremaneira, por isso alcançou igrejas/almas em quatro
+                  continentes da terra, que são: América, Europa, África e Ásia.
+                </p>
+                <p class="lead">
+                  Ela tem muitas realizações vitoriosas do Senhor: o programa
+                  Voz da Libertação; milhares de conversões, libertações e
+                  batismos de muitíssimas almas do mundo inteiro; lançou o
+                  Jornal O Testemunho e as revistas Expressão Jovem e Ide;
+                  muitas IPDAs pelo Brasil e mundo; entre outras.
+                </p>
+                <p class="lead">
+                  O número de almas que aceitavam a Jesus Cristo era muito
+                  grande, com isso, foi inaugurado o Templo III, na Avenida do
+                  Estado, nº 5000. Em seguida, no decorrer dos anos, pelo
+                  crescimento da obra, foi reconstruída a antiga Sede e
+                  inaugurado o novo Templo da Glória de Deus.
+                </p>
+                <p class="lead">
+                  Contudo, essa obra que começou com três membros, hoje, pela
+                  graça de Deus, superabunda a cada dia, principalmente por
+                  causa da palavra verdadeira que é pregada desde o início de
+                  sua existência. Por intermédio dela, almas foram ganhas para o
+                  Reino dos Céus, salvas pelo Senhor Jesus, através deste
+                  ministério, em cumprimento das promessas do Filho de Deus, O
+                  qual prometeu ao Seu filho: missionário David Miranda.
+                </p>
+              </div>
+              <div class="col-md-5">
+                <img
+                  src="https://i.ibb.co/YRs6kVN/i-ibb-co-j-Rxnx-Pf-megatemplo-igreja-pentecostal-deus-e-amor-jpg.png"
+                  class="
+                    bio-card
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    my-5
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .multiuse-pages-section-details {
+          background-color: #eeeeee;
+        }
+        .multiuse-pages-section-details img {
+          border-radius: 10px;
+          box-shadow: 0px 10px 20px 0px #0000002f;
+          box-shadow: 0px 5px 15px 0px #0000003f;
+          box-shadow: 0px 2px 7px 0px #0000004f;
+        }
+        .multiuse-pages-section-details .bio-card {
+          background: var(--white);
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 4px 12px 0px #3d3e851c;
+          padding: 0;
+          margin: 0;
+        }
+      </style>
+      <!-- [FINAL] SECTION - DETALHES
+  ================================================== -->
+
+      <!-- [INÍCIO] SECTION - CONTATO
+  ================================================== -->
+      <section class="multiuse-pages-section-contact">
+        <div class="container-fluid">
+          <div class="container">
+            <h1 class="font-weight-bold text-center h1">Fale com a gente!</h1>
+            <div class="underline"></div>
+            <p class="text-center mb-5 mx-auto lead">
+              Dúvidas, sugestões e informações, ligue-nos: 3347-4736 e/ou
+              3347-4770 En español, marque: (5511) 3347-4735
+            </p>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                <img
+                  src="https://i.ibb.co/1nqHVnY/Foto-Templo.jpg"
+                  class="
+                    bd-placeholder-img bd-placeholder-img-lg
+                    featurette-image
+                    img-fluid
+                    mx-auto
+                    mb-4
+                    bio-card
+                  "
+                />
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h2 class="font-weight-bold my-4">Endereço</h2>
+                    <i class="h1 bi bi-geo-alt"></i>
+                    <h5 class="my-4">
+                      Avenida do Estado, 4568 - Baixada do Glicério / SP
+                      <br />Próximo ao Metrô Pedro II e Sé
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-center">
+                      <h2 class="font-weight-bold my-4">Contato</h2>
+                      <i class="h1 bi bi-telephone"></i>
+                    </div>
+                    <table class="my-5 table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Local</th>
+                          <th scope="col">Contato</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Igreja Pentecostal Deus é Amor</td>
+                          <td><code>(11) 3347-4700</code></td>
+                        </tr>
+                        <tr>
+                          <td>Dúvidas, sugestões e informações</td>
+                          <td><code>(11) 3347-4736</code></td>
+                        </tr>
+                        <tr>
+                          <td>En español</td>
+                          <td><code>55(11) 3347-4735</code></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Central de Fax <br /><span class="text-muted"
+                              >Fiscalização da Diretoria</span
+                            >
+                          </td>
+                          <td>
+                            <code>(11) 3347-4737</code><br /><code
+                              >(11) 3347-4794</code
+                            ><br /><code>(11) 3347-4733</code><br /><code
+                              >(ramal 178)</code
+                            ><br />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Recebimento de Fax</td>
+                          <td><code>(11) 3347-4737</code><br /></td>
+                        </tr>
+                        <tr>
+                          <td>Ata Interna</td>
+                          <td><code>(11) 3347-4770</code><br /></td>
+                        </tr>
+                        <tr>
+                          <td>Circular</td>
+                          <td><code>(11) 3347-4736</code><br /></td>
+                        </tr>
+                        <tr>
+                          <td>Resolução da Diretoria</td>
+                          <td>
+                            <code>(11) 3347-4769</code><br /><code
+                              >(11) 3347-4770</code
+                            ><br />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+        .multiuse-pages-section-contact {
+          padding: 80px 0;
+        }
+        .multiuse-pages-section-contact td {
+          line-height: 1.5em;
+        }
+        .multiuse-pages-section-contact th {
+          border-bottom: 2px solid var(--primary-color) !important;
+        }
+        .multiuse-pages-section-contact .underline {
+          width: 100px;
+          height: 5px;
+          margin: 10px auto 50px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+        }
+        .multiuse-pages-section-contact i {
+          box-shadow: var(--secondary-color) 0px 0px 0px 5px;
+          color: var(--primary-color);
+          padding: 30px;
+          height: 100px;
+          width: 100px;
+          border-radius: 200px;
+          display: block;
+          margin: 0 auto;
+          font-size: 2.2em;
+        }
+        .multiuse-pages-section-contact .card {
+          border-radius: 16px;
+        }
+        .multiuse-pages-section-contact .bio-card {
+          background: var(--white);
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0px 4px 12px 0px #3d3e851c;
+          padding: 0;
+          margin: 0;
+        }
+      </style>
+      <!-- [FINAL] SECTION - CONTATO
+  ==================================================-->
+
+      <!-- [INÍCIO] SECTION - MAPS
+  ==================================================-->
+      <section class="multiuse-pages-section-map">
+        <div class="container-fluid p-0">
+          <div class="row p-0 m-0">
+            <div class="multiuse-pages-section-map-responsive">
               <iframe
-                src="https://www.youtube.com/embed/KzBdvwHZOIo"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.0347828703298!2d-46.62737344713546!3d-23.55453813488907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5905865db2d1%3A0x95a85673d4505e68!2sIgreja+Pentecostal+Deus+%C3%A9+Amor!5e0!3m2!1spt-BR!2sbr!4v1455972614556"
+                width="600"
+                height="450"
+                style="border: 0"
                 allowfullscreen=""
+                loading="lazy"
               ></iframe>
             </div>
-            <div class="p-4 text-center">
-              <a
-                class="py-2 px-4 btn btn-light"
-                style="font-size: 1em"
-                href="http://www.youtube.com/channel/UC5KOZrbbdsPizjoLIG--zkg?sub_confirmation=1"
-                >Inscreva-se nocanal</a
-              >
-            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <style>
+        .multiuse-pages-section-map-responsive {
+          width: 100%;
+          background: #eeeeee;
+          padding: 0;
+        }
+        .multiuse-pages-section-map-responsive iframe {
+          width: 100%;
+        }
+      </style>
+      <!-- [FINAL] SECTION - MAPS
+  ================================================== -->
     </div>
-  </div>
-  </section>
-  <!-- [FINAL] SECTION - STORY BIOGRAFIA
-  ================================================== -->
-
-  <!-- [INÍCIO] SECTION - CARD
-  ================================================== -->
-  <section class="multiuse-pages-section-card">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card bio-card">
-              <div
-                class="multiuse-pages-section-card-img"
-                style="
-                  background-image: url(https://i.ibb.co/WDFGTm3/Concentracao-miss-060806-064.jpg);
-                "
-              ></div>
-              <div class="card-body">
-                <h3>Reunião de Fé com o Miss. David Miranda</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bio-card">
-              <div
-                class="multiuse-pages-section-card-img"
-                style="
-                  background-image: url(https://i.ibb.co/SVm2P5W/miss-David-Miranda.jpg);
-                "
-              ></div>
-              <div class="card-body">
-                <h3>Missionário David Miranda nos anos 60</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bio-card">
-              <div
-                class="multiuse-pages-section-card-img"
-                style="
-                  background-image: url(https://i.ibb.co/4jQvJjj/primeiraigreja.jpg);
-                "
-              ></div>
-              <div class="card-body">
-                <h3>IPDA foi fundada dia 03 de Junho de 1962</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <style>
-    .multiuse-pages-section-card {
-      background-color: var(--secondary-color);
-      text-align: center;
-      padding: 20px 0 80px;
-    }
-    .multiuse-pages-section-card p {
-      text-align: center;
-    }
-    .multiuse-pages-section-card .card {
-      border-radius: 10px 10px 0 0;
-      border: none;
-    }
-    .multiuse-pages-section-card .bio-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0px 4px 12px 0px #3d3e851c;
-      padding: 0;
-      margin: 20px 0 !important;
-    }
-    .multiuse-pages-section-card-img {
-      width: 100%;
-      height: 240px;
-      margin: 0 auto;
-      padding: 0;
-      border-radius: 10px 10px 0 0;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
-  <!-- [FINAL] SECTION - CARD
-  ================================================== -->
-
-  <!-- [INÍCIO] SECTION - STORY
-  ================================================== -->
-  <section class="multiuse-pages-section-story">
-    <div class="container-fluid">
-      <div class="container">
-        <h1 class="font-weight-bold text-center h1">
-          Um atentado durante um culto em 1992
-        </h1>
-        <div class="underline"></div>
-        <p class="mb-3 mx-auto lead">
-          Em 1992, o saudoso Miss. David Miranda foi vítima de um atentado durante
-          um culto no antigo templo, onde um rapaz, que já havia assassinado o
-          pastor Ruy Freitas, da IPDA de Caxias do Sul/RS, veio para São Paulo com
-          a mesma intenção de matá-lo.
-        </p>
-        <p class="mb-5 mx-auto lead">
-          Durante o culto, o missionário chamou as pessoas à frente do púlpito
-          para aceitarem a Jesus, momento em que esse rapaz veio entre elas e
-          atirou no rosto do missionário, cuja bala raspou na sua face esquerda e
-          deixou incrustado o estilhaço. Sangrou muito, mas Deus o livrou da morte
-          pelo Seu grande poder. Em seguida, atirou novamente, porém o missionário
-          havia se abaixado e a bala acertou a parede de trás. Esse acontecimento
-          verídico mostra-nos os grandes propósitos que Jesus tinha com o Seu
-          servo, o que, de fato, são resultados da gigante obra evangelística que
-          cresce dia a dia.
-        </p>
-      </div>
-    </div>
-  </section>
-  <style>
-    .multiuse-pages-section-story {
-      background-color: var(--dark);
-      padding: 80px 0;
-      color: var(--white);
-    }
-    .multiuse-pages-section-story .underline {
-      width: 100px;
-      height: 5px;
-      margin: 10px auto 50px;
-      border-radius: 10px;
-      background-color: var(--primary-color);
-    }
-  </style>
-  <!-- [FINAL] SECTION - STORY
-  ================================================== -->
-
-  <!-- [INÍCIO] SECTION - BANNER DIVIDER
-  ==================================================-->
-  <section class="multiuse-pages-section-banner-divider"></section>
-  <style>
-    .multiuse-pages-section-banner-divider {
-      height: 350px;
-      background-image: url(https://i.ibb.co/Ph81jGv/David-Miranda.jpg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
-  </style>
-  <!-- [FINAL] SECTION - BANNER DIVIDER
-  ==================================================-->
-
-  <!-- [INÍCIO] SECTION - DESTAQUES
-  ==================================================-->
-  <section class="multiuse-pages-section-destaque">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="p-3 bio-card">
-              <div
-                class="multiuse-pages-section-destaque-img"
-                style="
-                  background-image: url(https://i.ibb.co/xJL44dm/Concentracao-miss-060806-082.jpg);
-                "
-              ></div>
-              <div class="text-start m-4">
-                <h2>Uma vida marcada de Milagres</h2>
-                <p class="multiuse-pages-section-destaque-p">
-                  David Miranda que realizou várias concentrações do Brasil e no
-                  mundo, onde muitos milagres de curas e livramentos aconteceram.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-3 bio-card">
-              <div
-                class="multiuse-pages-section-destaque-img"
-                style="
-                  background-image: url(https://i.ibb.co/s1VrjNx/j-PIn9l-INll-ZFcuer.jpg);
-                "
-              ></div>
-              <div class="text-start m-4">
-                <h2>Missionário pregando através da Rádio</h2>
-                <p class="multiuse-pages-section-destaque-p">
-                  Em 1961 deu-se início à programação de rádio, e após uma
-                  revelação de Deus, David Miranda decide seguir um ministério
-                  próprio. No ano seguinte, fundam a Igreja Pentecostal Deus é
-                  Amor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-3 bio-card">
-              <div
-                class="multiuse-pages-section-destaque-img"
-                style="
-                  background-image: url(https://i.ibb.co/0CSJ1Hb/casamento.jpg);
-                "
-              ></div>
-              <div class="text-start m-4">
-                <h2>Missionário e sua esposa Ereni Miranda</h2>
-                <p class="multiuse-pages-section-destaque-p">
-                  Em uma vigília ele conheceu a jovem Ereni. No dia 12 de junho de
-                  1965 casou-se com ela e tiveram quatro filhos: David, Débora,
-                  Léia e Daniel.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <style>
-    .multiuse-pages-section-destaque {
-      background-color: #fafafa;
-      text-align: center;
-      padding: 80px 0;
-    }
-    .multiuse-pages-section-destaque p {
-      margin: 0;
-    }
-    .multiuse-pages-section-destaque-img {
-      width: 100%;
-      height: 240px;
-      margin: 0px auto;
-      padding: 0;
-      border-radius: 10px;
-      background-position: center;
-      background-size: cover;
-    }
-    .multiuse-pages-section-destaque .bio-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0px 4px 12px 0px #3d3e851c;
-      padding: 0;
-      margin: 20px 0 !important;
-    }
-  </style>
-  <!-- [FINAL] SECTION - DESTAQUES
-  ==================================================-->
-
-  <!-- [INÍCIO] SECTION - DETALHES
-  ==================================================-->
-  <section class="multiuse-pages-section-details">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row py-5">
-          <div class="col-md-7">
-            <h1 class="font-weight-bold h1 mt-5">
-              Igreja Pentecostal Deus é Amor
-            </h1>
-            <p class="lead">
-              A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho de
-              1962, pelo Missionário David Martins Miranda; visto que a data e a
-              denominação foram reveladas ao fundador, por intermédio do Espírito
-              Santo. O ministério iniciou com apenas três membros: Missionário
-              David Martins Miranda, sua mãe Anália Miranda e sua irmã Araci
-              Miranda. Sabe-se que muitíssimas almas são salvas pelo Senhor,
-              através desta grande obra, em cumprimento das promessas dele ao seu
-              servo.
-            </p>
-            <p class="lead">
-              Com confiança e obediência Àquele que o chamou, Jesus Cristo, o
-              saudoso Missionário David Miranda se empenhou dia a dia nos cultos,
-              evangelizações, vigílias, consagrações, etc.; resultando em inúmeras
-              IPDAs, presentes nos continentes: Américas, Europa, África e Ásia.
-              Com isso, hoje, já está com mais de 17 mil igrejas espalhadas pelo
-              Brasil e em 88 países em todo o mundo.
-            </p>
-            <p class="lead">
-              O fundador partiu para o Senhor em 21/02/2015, sua esposa, Irmã
-              Ereni de Oliveira Miranda, é atual presidente do ministério. Ela
-              está dando continuidade ao crescimento espiritual, para que mais
-              pessoas recebam a coroa da Vida Eterna, e isso é o que mais faz
-              crescer a IPDA: evangelizar, amar, resgatar, zelar e cuidar das
-              almas, a fim de que se tornem filhas de Deus.
-            </p>
-            <p class="lead">
-              “Contudo, aos que o receberam, aos que creram em Seu Nome, deu-lhes
-              o direito de se tornarem filhos de Deus” (João 1:12).
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img
-              src="https://i.ibb.co/1nqHVnY/Foto-Templo.jpg"
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-                my-5
-                bio-card
-              "
-            />
-            <img
-              src="https://i.ibb.co/9h01K3H/igreja.jpg"
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-                my-5
-                bio-card
-              "
-            />
-          </div>
-        </div>
-        <hr class="m-0" />
-        <div class="row py-5">
-          <div class="col-md-7 order-md-2">
-            <h1 class="font-weight-bold h1 mt-5">Templo da Glória de Deus</h1>
-            <p class="lead">
-              O Templo da Glória de Deus foi inaugurado dia 01 de janeiro de 2004,
-              situado na Avenida do Estado, 4568, na cidade e município de São
-              Paulo. Caravanas de estados do Brasil e de outros países marcaram
-              presença nesta data célebre.
-            </p>
-            <p class="lead">
-              O Templo tem a dimensão de 65.000m², quase 50 metros de altura; tem
-              a capacidade para 60 mil pessoas, um estacionamento para 500
-              automóveis e 143 ônibus; 400 sanitários, 12 mil metros de escadas, 3
-              enormes elevadores; toda a área tem ar-condicionado, 200 vitrais
-              coloniais, com vidros coloridos; 2 belíssimos pórticos; e as
-              cadeiras da igreja possuem 07 cores, simbolizando as 07 cores do
-              arco-íris.
-            </p>
-            <p class="lead">
-              Decerto, é uma obra gigantesca, marcada na história do evangelho,
-              que tende a crescer mais e mais, porque seu foco é propagar a
-              Palavra de Deus; fazendo com que se expanda notoriamente e ilumine
-              os passos de todos aqueles que a aceitam.
-            </p>
-            <p class="lead"></p>
-            <blockquote class="blockquote text-center">
-              <p class="mb-0">
-                “A Tua Palavra é lâmpada que ilumina os meus passos e luz que
-                clareia o meu caminho”
-              </p>
-              <footer class="blockquote-footer">
-                <h6><cite title="Source Title">(Salmos 119:105)</cite></h6>
-              </footer>
-            </blockquote>
-            <p></p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img
-              src="https://i.ibb.co/s9qwNXZ/i-ibb-co-6mkc6-CK-ipda-antiga-jpg.png"
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-                my-5
-                bio-card
-              "
-            />
-            <img
-              src="https://i.ibb.co/MCy6kht/vuy2-Yq-T0-ULoq-L8c-M.jpg"
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-                my-5
-                bio-card
-              "
-            />
-          </div>
-        </div>
-        <hr class="m-0" />
-        <div class="row py-5">
-          <div class="col-md-7">
-            <h1 class="font-weight-bold h1 mt-5">Trajetória da IPDA</h1>
-            <p class="lead">
-              A Igreja Pentecostal Deus é Amor foi fundada dia 03 de Junho de 1962
-              e começou com apenas três membros: Missionário David Martins
-              Miranda, sua mãe Anália Miranda e sua irmã Araci Miranda, conforme a
-              orientação do Senhor. Ela cresceu e cresce sobremaneira, por isso
-              alcançou igrejas/almas em quatro continentes da terra, que são:
-              América, Europa, África e Ásia.
-            </p>
-            <p class="lead">
-              Ela tem muitas realizações vitoriosas do Senhor: o programa Voz da
-              Libertação; milhares de conversões, libertações e batismos de
-              muitíssimas almas do mundo inteiro; lançou o Jornal O Testemunho e
-              as revistas Expressão Jovem e Ide; muitas IPDAs pelo Brasil e mundo;
-              entre outras.
-            </p>
-            <p class="lead">
-              O número de almas que aceitavam a Jesus Cristo era muito grande, com
-              isso, foi inaugurado o Templo III, na Avenida do Estado, nº 5000. Em
-              seguida, no decorrer dos anos, pelo crescimento da obra, foi
-              reconstruída a antiga Sede e inaugurado o novo Templo da Glória de
-              Deus.
-            </p>
-            <p class="lead">
-              Contudo, essa obra que começou com três membros, hoje, pela graça de
-              Deus, superabunda a cada dia, principalmente por causa da palavra
-              verdadeira que é pregada desde o início de sua existência. Por
-              intermédio dela, almas foram ganhas para o Reino dos Céus, salvas
-              pelo Senhor Jesus, através deste ministério, em cumprimento das
-              promessas do Filho de Deus, O qual prometeu ao Seu filho:
-              missionário David Miranda.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img
-              src="https://i.ibb.co/YRs6kVN/i-ibb-co-j-Rxnx-Pf-megatemplo-igreja-pentecostal-deus-e-amor-jpg.png"
-              class="
-                bio-card
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-                my-5
-              "
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <style>
-    .multiuse-pages-section-details {
-      background-color: #eeeeee;
-    }
-    .multiuse-pages-section-details img {
-      border-radius: 10px;
-      box-shadow: 0px 10px 20px 0px #0000002f;
-      box-shadow: 0px 5px 15px 0px #0000003f;
-      box-shadow: 0px 2px 7px 0px #0000004f;
-    }
-    .multiuse-pages-section-details .bio-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0px 4px 12px 0px #3d3e851c;
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-  <!-- [FINAL] SECTION - DETALHES
-  ================================================== -->
-
-  <!-- [INÍCIO] SECTION - CONTATO
-  ================================================== -->
-  <section class="multiuse-pages-section-contact">
-    <div class="container-fluid">
-      <div class="container">
-      <h1 class="font-weight-bold text-center h1">Fale com a gente!</h1>
-      <div class="underline"></div>
-      <p class="text-center mb-5 mx-auto lead">
-        Dúvidas, sugestões e informações, ligue-nos: 3347-4736 e/ou 3347-4770 En
-        español, marque: (5511) 3347-4735
-      </p>
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-          <img
-            src="https://i.ibb.co/1nqHVnY/Foto-Templo.jpg"
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-              mb-4
-              bio-card
-            "
-          />
-          <div class="card">
-            <div class="card-body text-center">
-              <h2 class="font-weight-bold my-4">Endereço</h2>
-              <i class="h1 bi bi-geo-alt"></i>
-              <h5 class="my-4">
-                Avenida do Estado, 4568 - Baixada do Glicério / SP <br />Próximo
-                ao Metrô Pedro II e Sé
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="text-center">
-                <h2 class="font-weight-bold my-4">Contato</h2>
-                <i class="h1 bi bi-telephone"></i>
-              </div>
-              <table class="my-5 table">
-                <thead>
-                  <tr>
-                    <th scope="col">Local</th>
-                    <th scope="col">Contato</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Igreja Pentecostal Deus é Amor</td>
-                    <td><code>(11) 3347-4700</code></td>
-                  </tr>
-                  <tr>
-                    <td>Dúvidas, sugestões e informações</td>
-                    <td><code>(11) 3347-4736</code></td>
-                  </tr>
-                  <tr>
-                    <td>En español</td>
-                    <td><code>55(11) 3347-4735</code></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Central de Fax <br /><span class="text-muted"
-                        >Fiscalização da Diretoria</span
-                      >
-                    </td>
-                    <td>
-                      <code>(11) 3347-4737</code><br /><code
-                        >(11) 3347-4794</code
-                      ><br /><code>(11) 3347-4733</code><br /><code
-                        >(ramal 178)</code
-                      ><br />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Recebimento de Fax</td>
-                    <td><code>(11) 3347-4737</code><br /></td>
-                  </tr>
-                  <tr>
-                    <td>Ata Interna</td>
-                    <td><code>(11) 3347-4770</code><br /></td>
-                  </tr>
-                  <tr>
-                    <td>Circular</td>
-                    <td><code>(11) 3347-4736</code><br /></td>
-                  </tr>
-                  <tr>
-                    <td>Resolução da Diretoria</td>
-                    <td>
-                      <code>(11) 3347-4769</code><br /><code
-                        >(11) 3347-4770</code
-                      ><br />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-  <style>
-    @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
-    .multiuse-pages-section-contact {
-      padding: 80px 0;
-    }
-    .multiuse-pages-section-contact td {
-      line-height: 1.5em;
-    }
-    .multiuse-pages-section-contact th {
-      border-bottom: 2px solid var(--primary-color) !important;
-    }
-    .multiuse-pages-section-contact .underline {
-      width: 100px;
-      height: 5px;
-      margin: 10px auto 50px;
-      border-radius: 10px;
-      background-color: var(--primary-color);
-    }
-    .multiuse-pages-section-contact i {
-      box-shadow: var(--secondary-color) 0px 0px 0px 5px;
-      color: var(--primary-color);
-      padding: 30px;
-      height: 100px;
-      width: 100px;
-      border-radius: 200px;
-      display: block;
-      margin: 0 auto;
-      font-size: 2.2em;
-    }
-    .multiuse-pages-section-contact .card {
-      border-radius: 16px;
-    }
-    .multiuse-pages-section-contact .bio-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0px 4px 12px 0px #3d3e851c;
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-  <!-- [FINAL] SECTION - CONTATO
-  ==================================================-->
-
-  <!-- [INÍCIO] SECTION - MAPS
-  ==================================================-->
-  <section class="multiuse-pages-section-map">
-    <div class="container-fluid p-0">
-      <div class="row p-0 m-0">
-        <div class="multiuse-pages-section-map-responsive">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.0347828703298!2d-46.62737344713546!3d-23.55453813488907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5905865db2d1%3A0x95a85673d4505e68!2sIgreja+Pentecostal+Deus+%C3%A9+Amor!5e0!3m2!1spt-BR!2sbr!4v1455972614556"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-  <style>
-    .multiuse-pages-section-map-responsive {
-      width: 100%;
-      background: #eeeeee;
-      padding: 0;
-    }
-    .multiuse-pages-section-map-responsive iframe {
-      width: 100%;
-    }
-  </style>
-  <!-- [FINAL] SECTION - MAPS
-  ================================================== -->
-</div>
+  </body>
+</html>
